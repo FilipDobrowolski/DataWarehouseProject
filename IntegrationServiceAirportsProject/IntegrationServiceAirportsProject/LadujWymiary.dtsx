@@ -1,0 +1,110 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/11/2019 3:13:48 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-RD03SIO"
+  DTS:CreatorName="DESKTOP-RD03SIO\Filip"
+  DTS:DTSID="{26225709-EF56-4187-AAF7-E336BA944519}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1300.371"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="LadujWymiary"
+  DTS:PackageType="5"
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{029F8378-2C40-499D-BB22-5D6199920DB6}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-RD03SIO\FILIP.WATOSTATECZNAHURTOWNIA]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{845AECF5-A837-4BC3-B3C4-944222F55490}"
+      DTS:ObjectName="DESKTOP-RD03SIO\FILIP.WATOSTATECZNAHURTOWNIA">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DESKTOP-RD03SIO\FILIP;Initial Catalog=WATOSTATECZNAHURTOWNIA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[{64F1C185-1124-4AF6-BA99-7000434544C3\}]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{64F1C185-1124-4AF6-BA99-7000434544C3}"
+      DTS:ObjectName="{64F1C185-1124-4AF6-BA99-7000434544C3}">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[{C37AF0DA-1351-48EB-9BFE-3DA64D0970A6\}]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{C37AF0DA-1351-48EB-9BFE-3DA64D0970A6}"
+      DTS:ObjectName="{C37AF0DA-1351-48EB-9BFE-3DA64D0970A6}">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[{CFF0C342-BDC9-4040-A9E7-0973A142FB04\}]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{CFF0C342-BDC9-4040-A9E7-0973A142FB04}"
+      DTS:ObjectName="{CFF0C342-BDC9-4040-A9E7-0973A142FB04}">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[{FA4BB291-9300-4338-8259-240710736020\}]"
+      DTS:CreationName="ADO.NET:SQL"
+      DTS:DTSID="{FA4BB291-9300-4338-8259-240710736020}"
+      DTS:ObjectName="{FA4BB291-9300-4338-8259-240710736020}">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Execute T-SQL Statement Task"
+      DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:Description="Execute T-SQL Statement Task"
+      DTS:DTSID="{FFE6B145-3928-4136-87A3-043C5EDD7B37}"
+      DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Execute T-SQL Statement Task"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{845AECF5-A837-4BC3-B3C4-944222F55490}"
+          SQLTask:SqlStatementSource="DECLARE @SqlStatement NVARCHAR(MAX) SELECT @SqlStatement =  COALESCE(@SqlStatement, N'') + N'DELETE FROM [stage_dim].' + QUOTENAME(TABLE_NAME) + N';' + CHAR(13) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'stage_dim' EXECUTE(@SqlStatement)"
+          SQLTask:ServerVersion="9"
+          SQLTask:ExtendedLogging="True"
+          SQLTask:LocalConnectionForLogging=""
+          SQLTask:TaskName=""
+          SQLTask:IgnoreDatabasesInNotOnlineState="False" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="224.8,41.6"
+          Id="Package\Execute T-SQL Statement Task"
+          TopLeft="274.857147537933,42.2117652978864" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
