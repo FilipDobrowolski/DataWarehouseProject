@@ -1,4 +1,4 @@
-CREATE TABLE stage_fact.[FINAL_FLIGHT] (
+CREATE TABLE staging_facts.[FINAL_FLIGHT] (
     [FL_DATE] date,
     [OP_CARRIER] varchar(3),
     [TAIL_NUMBER] varchar(7),

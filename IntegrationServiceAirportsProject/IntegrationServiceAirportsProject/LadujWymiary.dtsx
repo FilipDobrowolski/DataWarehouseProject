@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LadujWymiary"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{029F8378-2C40-499D-BB22-5D6199920DB6}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{B37030DF-7243-4686-AF7B-CF4D8ABEA434}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -24,6 +24,106 @@
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=DESKTOP-RD03SIO\FILIP;Initial Catalog=WATOSTATECZNAHURTOWNIA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager Route]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C1CE3670-B9B8-4918-ACAE-D6DB42F408A1}"
+      DTS:ObjectName="Flat File Connection Manager Route">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Warehouse\DataWarehouseProject\Dane\routes.dat">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 0"
+              DTS:DTSID="{86802F2A-D789-4357-BFA1-9AB0012AFC3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 1"
+              DTS:DTSID="{3EBFC9A5-0F36-411E-B986-095E8465601F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 2"
+              DTS:DTSID="{40FD62F4-2269-450C-9DB9-58598C24AF1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 3"
+              DTS:DTSID="{07ADD338-E9D4-4406-8227-A23D1612170F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 4"
+              DTS:DTSID="{BF4FFAB1-96C6-40D3-AA1B-E3420074FF49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 5"
+              DTS:DTSID="{6B804C5B-937C-4B4F-B0AA-DED8FBC4C2D3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 6"
+              DTS:DTSID="{5DB8F4C4-7417-4ABD-826F-01DDF2FECB90}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 7"
+              DTS:DTSID="{E36BE687-68A4-42A5-B3EC-1D94752BCB81}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Column 8"
+              DTS:DTSID="{2447AB88-0146-4D77-A001-824F2BAAAD59}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -66,19 +166,756 @@
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Execute T-SQL Statement Task"
+      DTS:refId="Package\laduj dane o lini lotniczej"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{66615D1B-F833-48B0-8210-B9F6F325353F}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="laduj dane o lini lotniczej"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\laduj dane o lotnisku"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BE97FA3D-2F41-4AE5-B331-3D2A8517900A}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="laduj dane o lotnisku"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\laduj dane o trasie"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{DA43FCBB-BD53-4C52-88D2-62830388E2E5}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="laduj dane o trasie"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\laduj dane o trasie\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\laduj dane o trasie\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager Route]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager Route]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[AIRLINE_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[AIRLINE_CODE]"
+                      name="AIRLINE_CODE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[AIRLINE_OF_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[AIRLINE_OF_ID]"
+                      name="AIRLINE_OF_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[SOURCE_AIRPORT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[SOURCE_AIRPORT]"
+                      name="SOURCE_AIRPORT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[SOURCE_AIRPORT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[SOURCE_AIRPORT_ID]"
+                      name="SOURCE_AIRPORT_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[DESTINATION_AIRPORT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[DESTINATION_AIRPORT]"
+                      name="DESTINATION_AIRPORT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[DESTINATION_AIRPORT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[DESTINATION_AIRPORT_ID]"
+                      name="DESTINATION_AIRPORT_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[CODESHARE]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[CODESHARE]"
+                      name="CODESHARE"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[STOPS]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[STOPS]"
+                      name="STOPS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[EQUIPMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                      length="50"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[EQUIPMENT]"
+                      name="EQUIPMENT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 0]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 0" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 1]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 1" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 2]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 2" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 3]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 3" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 4]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 4" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 5]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 5" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 6]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 6" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 7]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 7" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Column 8]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Column 8" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="laduj do staging RAW_ROUTE"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[staging_dimensions].[RAW_ROUTE]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-RD03SIO\FILIP.WATOSTATECZNAHURTOWNIA]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-RD03SIO\FILIP.WATOSTATECZNAHURTOWNIA]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[AIRLINE_OF_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AIRLINE_OF_ID"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[AIRLINE_OF_ID]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[AIRLINE_OF_ID]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[SOURCE_AIRPORT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SOURCE_AIRPORT"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[SOURCE_AIRPORT]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[SOURCE_AIRPORT]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[SOURCE_AIRPORT_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SOURCE_AIRPORT_ID"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[SOURCE_AIRPORT_ID]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[SOURCE_AIRPORT_ID]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[DESTINATION_AIRPORT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DESTINATION_AIRPORT"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATION_AIRPORT]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[DESTINATION_AIRPORT]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[DESTINATION_AIRPORT_ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="DESTINATION_AIRPORT_ID"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATION_AIRPORT_ID]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[DESTINATION_AIRPORT_ID]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[CODESHARE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="CODESHARE"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[CODESHARE]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[CODESHARE]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[STOPS]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="STOPS"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[STOPS]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[STOPS]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[EQUIPMENT]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EQUIPMENT"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[EQUIPMENT]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[EQUIPMENT]" />
+                    <inputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].Columns[AIRLINE_CODE]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AIRLINE_CODE"
+                      externalMetadataColumnId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[AIRLINE_CODE]"
+                      lineageId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output].Columns[AIRLINE_CODE]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[AIRLINE_CODE]"
+                      codePage="1252"
+                      dataType="str"
+                      description="AIRLINE_CODE"
+                      length="100"
+                      name="AIRLINE_CODE" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[AIRLINE_OF_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="AIRLINE_OF_ID" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[SOURCE_AIRPORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="SOURCE_AIRPORT" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[SOURCE_AIRPORT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="SOURCE_AIRPORT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATION_AIRPORT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="DESTINATION_AIRPORT" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[DESTINATION_AIRPORT_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="DESTINATION_AIRPORT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[CODESHARE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="CODESHARE" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[STOPS]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="STOPS" />
+                    <externalMetadataColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input].ExternalColumns[EQUIPMENT]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="EQUIPMENT" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\laduj dane o trasie.Paths[Flat File Source Output]"
+              endId="Package\laduj dane o trasie\laduj do staging RAW_ROUTE.Inputs[OLE DB Destination Input]"
+              name="Flat File Source Output"
+              startId="Package\laduj dane o trasie\Flat File Source.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\proceduj dane o trasie do tabel final"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{61F7A2D7-83EF-405D-AAA0-CD6B9124DDD8}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="proceduj dane o trasie do tabel final"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\proceduj dane o trasie do warehouse"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1073D82F-9B74-4EC4-BC9C-2B589B17E327}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="proceduj dane o trasie do warehouse"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\przeslij dane o lini do tabel final"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{23C88EBC-D76C-4433-942E-58DF7F268DE9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="przeslij dane o lini do tabel final"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\przeslij dane o lini do tabel procedded"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B35FA170-4BBA-429D-BB6D-D7C9401D9471}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="przeslij dane o lini do tabel procedded"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\przeslij dane o lini do tabel warehouse"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{775926A7-D593-4297-B3FA-08333756732E}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="przeslij dane o lini do tabel warehouse"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\przeslij dane o lotnisku do tabel procedded"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{72D89F55-41E5-4B79-B614-7C23A881DF99}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="przeslij dane o lotnisku do tabel procedded"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\przeslij dane o lotnisku do warehouse"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1D433890-437E-42EF-B9E7-C020E6A93BA0}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="przeslij dane o lotnisku do warehouse"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\przeslij dane o lotnisku final"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{7DD088AE-9652-45C1-B308-28991E690031}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="przeslij dane o lotnisku final"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\przeslij dane o trasie do tabel procedded"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{B4939B8B-3355-4E99-8A53-699E21C9F71B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="przeslij dane o trasie do tabel procedded"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Wyczysc tabele"
       DTS:CreationName="Microsoft.DbMaintenanceTSQLExecuteTask"
       DTS:Description="Execute T-SQL Statement Task"
       DTS:DTSID="{FFE6B145-3928-4136-87A3-043C5EDD7B37}"
       DTS:ExecutableType="Microsoft.DbMaintenanceTSQLExecuteTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Execute T-SQL Statement Task"
+      DTS:ObjectName="Wyczysc tabele"
       DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{845AECF5-A837-4BC3-B3C4-944222F55490}"
-          SQLTask:SqlStatementSource="DECLARE @SqlStatement NVARCHAR(MAX) SELECT @SqlStatement =  COALESCE(@SqlStatement, N'') + N'DELETE FROM [stage_dim].' + QUOTENAME(TABLE_NAME) + N';' + CHAR(13) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'stage_dim' EXECUTE(@SqlStatement)"
+          SQLTask:SqlStatementSource="DECLARE @SqlStatement NVARCHAR(MAX) SELECT @SqlStatement =  COALESCE(@SqlStatement, N'') + N'DELETE FROM [staging_dimensions].' + QUOTENAME(TABLE_NAME) + N';' + CHAR(13) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'staging_dimensions' EXECUTE(@SqlStatement)"
           SQLTask:ServerVersion="9"
           SQLTask:ExtendedLogging="True"
           SQLTask:LocalConnectionForLogging=""
@@ -87,6 +924,104 @@
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{C06CD569-C23A-4B43-814B-BF17828D90C9}"
+      DTS:From="Package\Wyczysc tabele"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\laduj dane o trasie" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{F8A602C3-65D4-455F-82A9-3914B7EDBE36}"
+      DTS:From="Package\Wyczysc tabele"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\laduj dane o lini lotniczej" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{414E075F-1E21-42EB-B644-6C29BDACCDDE}"
+      DTS:From="Package\przeslij dane o lotnisku do tabel procedded"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\przeslij dane o lotnisku final" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
+      DTS:CreationName=""
+      DTS:DTSID="{F2B2226B-3609-4AAA-B0B4-F94EAC5B5CEB}"
+      DTS:From="Package\przeslij dane o lotnisku final"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 11"
+      DTS:To="Package\przeslij dane o lotnisku do warehouse" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{007FC682-06F3-43DB-BA85-221586A1F103}"
+      DTS:From="Package\Wyczysc tabele"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\laduj dane o lotnisku" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{4BD1DBD4-21D7-4E2F-8467-648022883AEA}"
+      DTS:From="Package\laduj dane o trasie"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\przeslij dane o trasie do tabel procedded" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{31FA84A6-899A-4F95-8E58-8B8EE9765C7F}"
+      DTS:From="Package\przeslij dane o trasie do tabel procedded"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\proceduj dane o trasie do tabel final" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{45219137-DDA2-47BE-A8AC-8830DFB4E4BD}"
+      DTS:From="Package\proceduj dane o trasie do tabel final"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\proceduj dane o trasie do warehouse" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{3997F1CA-8F61-44D3-86D4-ADF9B2641E2A}"
+      DTS:From="Package\laduj dane o lini lotniczej"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\przeslij dane o lini do tabel procedded" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{D317FD6D-CB56-4E3E-9014-353508B811D7}"
+      DTS:From="Package\przeslij dane o lini do tabel procedded"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\przeslij dane o lini do tabel final" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{113057C2-A6E4-46AB-9A3A-C8E31B456F46}"
+      DTS:From="Package\przeslij dane o lini do tabel final"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\przeslij dane o lini do tabel warehouse" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{8C0E170D-5B47-4AD7-A18B-001A86DA162B}"
+      DTS:From="Package\laduj dane o lotnisku"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\przeslij dane o lotnisku do tabel procedded" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -98,13 +1033,496 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="224.8,41.6"
-          Id="Package\Execute T-SQL Statement Task"
-          TopLeft="274.857147537933,42.2117652978864" />
+          Size="150.4,41.6"
+          Id="Package\Wyczysc tabele"
+          TopLeft="11.4285716231991,65.4588244474471" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\laduj dane o trasie"
+          TopLeft="161.142859887104,184.752943767561" />
+        <NodeLayout
+          Size="195.2,41.6"
+          Id="Package\laduj dane o lini lotniczej"
+          TopLeft="341.714291533645,185.976473196485" />
+        <NodeLayout
+          Size="176,41.6"
+          Id="Package\laduj dane o lotnisku"
+          TopLeft="554.285723725144,187.811767339871" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="51.0285716231991,107.058824447447">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="192.914288263905,77.6941193201137"
+              Start="0,0"
+              End="192.914288263905,70.1941193201137">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.8004104971821" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,22.8004104971821"
+                    Point2="0,26.8004104971821"
+                    Point3="4,26.8004104971821" />
+                  <mssgle:LineSegment
+                    End="188.914288263905,26.8004104971821" />
+                  <mssgle:CubicBezierSegment
+                    Point1="188.914288263905,26.8004104971821"
+                    Point2="192.914288263905,26.8004104971821"
+                    Point3="192.914288263905,30.8004104971821" />
+                  <mssgle:LineSegment
+                    End="192.914288263905,70.1941193201137" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="86.6285716231991,107.058824447447">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="352.685719910446,78.917648749038"
+              Start="0,0"
+              End="352.685719910446,71.417648749038">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.458824374519" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35.458824374519"
+                    Point2="0,39.458824374519"
+                    Point3="4,39.458824374519" />
+                  <mssgle:LineSegment
+                    End="348.685719910446,39.458824374519" />
+                  <mssgle:CubicBezierSegment
+                    Point1="348.685719910446,39.458824374519"
+                    Point2="352.685719910446,39.458824374519"
+                    Point3="352.685719910446,43.458824374519" />
+                  <mssgle:LineSegment
+                    End="352.685719910446,71.417648749038" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="122.228571623199,107.058824447447">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="520.057152101945,80.7529428924243"
+              Start="0,0"
+              End="520.057152101945,73.2529428924243">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.8555447608014" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.8555447608014"
+                    Point2="0,27.8555447608014"
+                    Point3="4,27.8555447608014" />
+                  <mssgle:LineSegment
+                    End="516.057152101945,27.8555447608014" />
+                  <mssgle:CubicBezierSegment
+                    Point1="516.057152101945,27.8555447608014"
+                    Point2="520.057152101945,27.8555447608014"
+                    Point3="520.057152101945,31.8555447608014" />
+                  <mssgle:LineSegment
+                    End="520.057152101945,73.2529428924243" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="269.6,41.6"
+          Id="Package\przeslij dane o trasie do tabel procedded"
+          TopLeft="26.8571433145174,297.929415943053" />
+        <NodeLayout
+          Size="248.8,41.6"
+          Id="Package\proceduj dane o trasie do tabel final"
+          TopLeft="17.1428574347983,370.729416964046" />
+        <NodeLayout
+          Size="253.6,41.6"
+          Id="Package\proceduj dane o trasie do warehouse"
+          TopLeft="13.1428573666786,437.411770402849" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="243.942859887104,226.352943767561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-82.2857165725863,71.5764721754927"
+              Start="0,0"
+              End="-82.2857165725863,64.0764721754927">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.7882360877463" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.7882360877463"
+                    Point2="0,35.7882360877463"
+                    Point3="-4,35.7882360877463" />
+                  <mssgle:LineSegment
+                    End="-78.2857165725863,35.7882360877463" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-78.2857165725863,35.7882360877463"
+                    Point2="-82.2857165725863,35.7882360877463"
+                    Point3="-82.2857165725863,39.7882360877463" />
+                  <mssgle:LineSegment
+                    End="-82.2857165725863,64.0764721754927" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="161.657143314517,339.529415943053">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-20.1142858797191,31.2000010209924"
+              Start="0,0"
+              End="-20.1142858797191,23.7000010209924">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.6000005104962" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.6000005104962"
+                    Point2="0,15.6000005104962"
+                    Point3="-4,15.6000005104962" />
+                  <mssgle:LineSegment
+                    End="-16.1142858797191,15.6000005104962" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16.1142858797191,15.6000005104962"
+                    Point2="-20.1142858797191,15.6000005104962"
+                    Point3="-20.1142858797191,19.6000005104962" />
+                  <mssgle:LineSegment
+                    End="-20.1142858797191,23.7000010209924" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="140.742857400738,412.329416964046">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,25.0823534388032"
+              Start="0,0"
+              End="0,17.5823534388032">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17.5823534388032" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\przeslij dane o lini do tabel procedded"
+          TopLeft="317.142862543768,297.035296914652" />
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\przeslij dane o lini do tabel final"
+          TopLeft="316.571433962608,374.117650936879" />
+        <NodeLayout
+          Size="259.2,41.6"
+          Id="Package\przeslij dane o lini do tabel warehouse"
+          TopLeft="285.333338192531,453.78301153128" />
+        <NodeLayout
+          Size="280,41.6"
+          Id="Package\przeslij dane o lotnisku do tabel procedded"
+          TopLeft="582.857152783141,289.835296768796" />
+        <NodeLayout
+          Size="209.6,41.6"
+          Id="Package\przeslij dane o lotnisku final"
+          TopLeft="584.571438526621,367.529415505485" />
+        <NodeLayout
+          Size="255.2,41.6"
+          Id="Package\przeslij dane o lotnisku do warehouse"
+          TopLeft="574.285724065742,450.117651957872" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="442.628577038707,227.576473196485">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,69.4588237181668"
+              Start="0,0"
+              End="0,61.9588237181668">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,61.9588237181668" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="445.942862543768,338.635296914652">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.3714285811599,35.4823540222272"
+              Start="0,0"
+              End="-15.3714285811599,27.9823540222272">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7411770111136" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7411770111136"
+                    Point2="0,17.7411770111136"
+                    Point3="-4,17.7411770111136" />
+                  <mssgle:LineSegment
+                    End="-11.3714285811599,17.7411770111136" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.3714285811599,17.7411770111136"
+                    Point2="-15.3714285811599,17.7411770111136"
+                    Point3="-15.3714285811599,21.7411770111136" />
+                  <mssgle:LineSegment
+                    End="-15.3714285811599,27.9823540222272" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="430.571433962608,415.717650936879">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-15.6380957700771,38.0653605944007"
+              Start="0,0"
+              End="-15.6380957700771,30.5653605944007">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.0326802972003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.0326802972003"
+                    Point2="0,19.0326802972003"
+                    Point3="-4,19.0326802972003" />
+                  <mssgle:LineSegment
+                    End="-11.6380957700771,19.0326802972003" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-11.6380957700771,19.0326802972003"
+                    Point2="-15.6380957700771,19.0326802972003"
+                    Point3="-15.6380957700771,23.0326802972003" />
+                  <mssgle:LineSegment
+                    End="-15.6380957700771,30.5653605944007" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="642.285723725144,229.411767339871">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="80.5714290579971,60.4235294289242"
+              Start="0,0"
+              End="80.5714290579971,52.9235294289242">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.2117647144621" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.2117647144621"
+                    Point2="0,30.2117647144621"
+                    Point3="4,30.2117647144621" />
+                  <mssgle:LineSegment
+                    End="76.5714290579971,30.2117647144621" />
+                  <mssgle:CubicBezierSegment
+                    Point1="76.5714290579971,30.2117647144621"
+                    Point2="80.5714290579971,30.2117647144621"
+                    Point3="80.5714290579971,34.2117647144621" />
+                  <mssgle:LineSegment
+                    End="80.5714290579971,52.9235294289242" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="722.857152783141,331.435296768796">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-33.4857142565202,36.0941187366896"
+              Start="0,0"
+              End="-33.4857142565202,28.5941187366896">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,14.0470593683448" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,14.0470593683448"
+                    Point2="0,18.0470593683448"
+                    Point3="-4,18.0470593683448" />
+                  <mssgle:LineSegment
+                    End="-29.4857142565202,18.0470593683448" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.4857142565202,18.0470593683448"
+                    Point2="-33.4857142565202,18.0470593683448"
+                    Point3="-33.4857142565202,22.0470593683448" />
+                  <mssgle:LineSegment
+                    End="-33.4857142565202,28.5941187366896" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 11]"
+          TopLeft="689.371438526621,409.129415505485">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5142855391211,40.9882364523864"
+              Start="0,0"
+              End="12.5142855391211,33.4882364523864">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4941182261932" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4941182261932"
+                    Point2="0,20.4941182261932"
+                    Point3="4,20.4941182261932" />
+                  <mssgle:LineSegment
+                    End="8.51428553912115,20.4941182261932" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.51428553912115,20.4941182261932"
+                    Point2="12.5142855391211,20.4941182261932"
+                    Point3="12.5142855391211,24.4941182261932" />
+                  <mssgle:LineSegment
+                    End="12.5142855391211,33.4882364523864" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
+  <TaskHost
+    design-time-name="Package\laduj dane o trasie">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\laduj dane o trasie\Flat File Source"
+          TopLeft="154.857145494344,110.117648603182" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\laduj dane o trasie\laduj do staging RAW_ROUTE"
+          TopLeft="430.857150194596,110.729413317644" />
+        <EdgeLayout
+          Id="Package\laduj dane o trasie.Paths[Flat File Source Output]"
+          TopLeft="305.257145494344,131.223530960413">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.600004700252,0"
+              Start="0,0"
+              End="118.100004700252,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="118.100004700252,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\laduj dane o trasie\laduj do staging RAW_ROUTE">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
