@@ -1,0 +1,271 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="f4896daf-f3a5-4884-b1e4-8f1ffae071c1" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DIM DEPARTURE CALENDAR</ID>
+  <Name>DIM DEPARTURE CALENDAR</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1917" scrolltop="-5641" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9102" y="15028" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee00009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DEPARTURE_CALENDAR" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5228" height="3747" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00006c140000a30e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_DEPARTURE_CALENDAR" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1917</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5641</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c5b8c03f-f78b-4681-b3fa-0f6c0a3efe6f">
+    <DataSourceViewID>WATOSTATECZNAHURTOWNIA</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="42f23018-5a40-4827-8380-96ad0a13f112">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="7ed2ee0d-ea9f-4596-9e16-d5938640a821">
+      <ID>DEPARTURE DATE ID</ID>
+      <Name>DEPARTURE DATE ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cad84b96-02c7-4fee-9815-626b47573b54">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e91d70e5-ce67-4979-8cb6-93c2eaedbcdf">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_DATE_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="1cf7bef4-08bc-4232-9f33-5dd2727b2e5a">
+          <AttributeID>DEPARTURE QUARTER</AttributeID>
+          <Name>DEPARTURE QUARTER</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="ef0b803e-8506-4684-92d4-e16d6685b19a">
+          <AttributeID>DEPARTURE DAY OF WEEK</AttributeID>
+          <Name>DEPARTURE DAY OF WEEK</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f6bac595-e02c-49b9-8cbd-cdd6aafc6754">
+          <AttributeID>DEPARTURE NAME DAY</AttributeID>
+          <Name>DEPARTURE NAME DAY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="74512501-b293-4415-bac7-ca2cba72fcc0">
+          <AttributeID>DEPARTURE LEAP YEAR</AttributeID>
+          <Name>DEPARTURE LEAP YEAR</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7c36ffde-99d2-4246-b80b-a5835c3c2825">
+          <AttributeID>DEPARTURE DAY</AttributeID>
+          <Name>DEPARTURE DAY</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1680766a-c0b0-401c-97fb-c282b88759bd">
+          <AttributeID>DEPARTURE MONTH</AttributeID>
+          <Name>DEPARTURE MONTH</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="451688ce-d133-42f3-9fcc-d8077f776674">
+          <AttributeID>DEPARTURE YEAR</AttributeID>
+          <Name>DEPARTURE YEAR</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="47c41e4d-007f-429c-a135-39ef0f07b40e">
+      <ID>DEPARTURE QUARTER</ID>
+      <Name>DEPARTURE QUARTER</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4d1a672c-19f5-4037-8a78-7271b75d426a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a1041a9b-3644-4b96-a790-774102c1c409">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_QUARTER</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4144bb3d-854a-429a-b63a-dac190d5286f">
+      <ID>DEPARTURE DAY OF WEEK</ID>
+      <Name>DEPARTURE DAY OF WEEK</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="fc18b8f0-5571-4338-90d6-a70486e19778">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8b8dffc5-eae3-4fb9-ad19-735a637d79eb">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_DAY_OF_WEEK</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ffe8049a-45ac-476d-9392-169c064833ea">
+      <ID>DEPARTURE NAME DAY</ID>
+      <Name>DEPARTURE NAME DAY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5b92ba59-131e-4a0a-a546-0da731d71033">
+          <DataType>WChar</DataType>
+          <DataSize>10</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9ec7a621-b86f-4333-b5f0-b182c50195ed">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_NAME_DAY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eb6657c9-c290-42d5-a403-8cc6b78d0dd3">
+      <ID>DEPARTURE LEAP YEAR</ID>
+      <Name>DEPARTURE LEAP YEAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1466e881-f642-45bf-8423-b7e7a2f730f1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="56c6fcd0-a3e2-43d7-9136-a217768a6537">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_LEAP_YEAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="b1c55078-8767-485d-9429-8d951f753795">
+      <ID>DEPARTURE DAY</ID>
+      <Name>DEPARTURE DAY</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="178dbdba-28c2-4765-8ff3-f6a72748b9e3">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c788921b-e008-4ad2-b7bc-674503f63335">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_DAY</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="44094855-8e0d-472e-b145-a8590bb37f2a">
+      <ID>DEPARTURE MONTH</ID>
+      <Name>DEPARTURE MONTH</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="333f723c-baf7-4a21-96ab-ec9c2e68eb6f">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="390e8c9c-e4f1-45fc-b30e-e831a537302b">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_MONTH</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="22a1bf90-6cb7-4480-ae08-d095374909d0">
+      <ID>DEPARTURE YEAR</ID>
+      <Name>DEPARTURE YEAR</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6e7c3e60-8412-4892-bd31-c731354b177a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="32c710c5-8425-4c51-8db9-9e72f8f54fce">
+            <TableID>warehouse_DIM_DEPARTURE_CALENDAR</TableID>
+            <ColumnID>DEPARTURE_YEAR</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="82e645d9-acea-4bf3-9635-d447522d177a">
+      <ID>Hierarchy</ID>
+      <Name>Hierarchy Departure Name</Name>
+      <Levels>
+        <Level dwd:design-time-name="d6dc497d-d33e-4e01-83d1-57e28b5d7466">
+          <ID>DEPARTURE DATE ID</ID>
+          <Name>DEPARTURE DATE ID</Name>
+          <SourceAttributeID>DEPARTURE DATE ID</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="b572aa50-4601-425f-b60a-0bfa11512ec6">
+          <ID>DEPARTURE YEAR</ID>
+          <Name>DEPARTURE YEAR</Name>
+          <SourceAttributeID>DEPARTURE YEAR</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="e86d6841-9f54-4abc-a71d-2c6097e6a3dc">
+          <ID>DEPARTURE MONTH</ID>
+          <Name>DEPARTURE MONTH</Name>
+          <SourceAttributeID>DEPARTURE MONTH</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="0c38365d-ceea-4de4-a5ba-a7ebf19d8ca0">
+          <ID>DEPARTURE DAY</ID>
+          <Name>DEPARTURE DAY</Name>
+          <SourceAttributeID>DEPARTURE DAY</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

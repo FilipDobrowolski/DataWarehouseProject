@@ -1,0 +1,82 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>MultidimensionalAirportsProject</Database>
+    <Server>DESKTOP-RD03SIO\FILIP</Server>
+    <ConnectionString>Data Source=DESKTOP-RD03SIO\FILIP;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>wHBpsegKXcFmOKEvd5WOIXGRY50=12.06.2019 15:43:4612.06.2019 15:43:46</TimeStamp>
+        <ID>
+          <String>WATOSTATECZNAHURTOWNIA</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>5KoDgHheFmO2pqo5BFh3uB60+Ho=12.06.2019 15:52:2912.06.2019 15:52:28</TimeStamp>
+        <ID>
+          <String>WATOSTATECZNAHURTOWNIA</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>IYOjLW2CiqoT+Em5znZ9DCTj7yE=12.06.2019 16:30:2712.06.2019 16:30:27</TimeStamp>
+        <ID>
+          <String>DIM AIRLINE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Y0pT8u4aVkPcEz2HGLboR87ugxs=12.06.2019 17:07:5012.06.2019 16:36:14</TimeStamp>
+        <ID>
+          <String>DIM ROUTE</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>VTthFarFUc7MPd8vtQuKZpL4Fkk=12.06.2019 17:31:3012.06.2019 16:36:52</TimeStamp>
+        <ID>
+          <String>DIM DEPARTURE CALENDAR</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>C87w+QG2NMWI801xHP9QFf/9D4k=12.06.2019 17:31:3012.06.2019 16:38:00</TimeStamp>
+        <ID>
+          <String>FACT FLIGHT</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>SsPO+Eh7TGe/v39itLxgjZzAGSM=12.06.2019 18:39:3712.06.2019 17:31:29GDfBJwMjMdo2YaE2u6WZJPQ6yAM=12.06.2019 17:31:3012.06.2019 17:31:29</TimeStamp>
+        <ID>
+          <String>WATOSTATECZNAHURTOWNIA</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>8tnER6h2k8cw3i2ya9Vr69GA5W8=12.06.2019 15:21:0812.06.2019 15:21:08</TimeStamp>
+      <ID>
+        <String>MultidimensionalAirportsProject</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-06-12T16:40:58.59Z</LastDeployed>
+</DeploymentSnapshot>

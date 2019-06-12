@@ -1,0 +1,380 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e325f121-8ede-4c37-a053-d1c841c4df68" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>WATOSTATECZNAHURTOWNIA</ID>
+  <Name>WATOSTATECZNAHURTOWNIA</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>WATOSTATECZNAHURTOWNIA</DataSourceID>
+  <Schema>
+    <xs:schema id="WATOSTATECZNAHURTOWNIA" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="WATOSTATECZNAHURTOWNIA" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="0598b8bb-9c94-41f3-879b-816fe260d212">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="warehouse_DIM_ROUTE" msprop:design-time-name="4113283f-8eff-456d-848d-911035790528" msprop:DbTableName="DIM_ROUTE" msprop:FriendlyName="DIM_ROUTE" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IATA_DEP_AIRPORT_ID" msprop:design-time-name="9dd11208-6698-4bd5-87d9-9633e8f09413" msprop:DbColumnName="IATA_DEP_AIRPORT_ID" msprop:FriendlyName="IATA_DEP_AIRPORT_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IATA_ARR_AIRPORT_ID" msprop:design-time-name="daf20e53-037a-47a6-ab76-375ddfdc41c1" msprop:DbColumnName="IATA_ARR_AIRPORT_ID" msprop:FriendlyName="IATA_ARR_AIRPORT_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="CODESHARE" msprop:design-time-name="aac05e60-10ae-4031-8e9a-c41f1a9e5e83" msprop:DbColumnName="CODESHARE" msprop:FriendlyName="CODESHARE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="STOPS" msprop:design-time-name="d3f093b0-f670-443e-8608-1620e62c05b3" msprop:DbColumnName="STOPS" msprop:FriendlyName="STOPS" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_DEPARTURE_TIME" msprop:design-time-name="27ab84fe-c6fe-4d92-84b0-13f37662084f" msprop:DbTableName="DIM_DEPARTURE_TIME" msprop:FriendlyName="DIM_DEPARTURE_TIME" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DEP_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="b73ab41d-fb2c-4280-80ab-9fe1b22a8eca" msprop:DbColumnName="DEP_TIME_ID" msprop:FriendlyName="DEP_TIME_ID" type="xs:anyType" />
+                  <xs:element name="DEP_TIME_HOUR" msprop:design-time-name="cb4af424-5165-4a30-8d16-11b64a8a5f71" msprop:DbColumnName="DEP_TIME_HOUR" msprop:FriendlyName="DEP_TIME_HOUR" type="xs:int" />
+                  <xs:element name="DEP_TIME_MINUTE" msprop:design-time-name="02f9da4c-ecd2-4958-a09e-139a05935bb6" msprop:DbColumnName="DEP_TIME_MINUTE" msprop:FriendlyName="DEP_TIME_MINUTE" type="xs:int" />
+                  <xs:element name="DEP_TIME_SECOND" msprop:design-time-name="65c09455-76b8-4683-9cd0-8b493a9e84ea" msprop:DbColumnName="DEP_TIME_SECOND" msprop:FriendlyName="DEP_TIME_SECOND" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_DEPARTURE_CALENDAR" msprop:design-time-name="0b50de49-18f6-4e57-a690-792f5535bf44" msprop:DbTableName="DIM_DEPARTURE_CALENDAR" msprop:FriendlyName="DIM_DEPARTURE_CALENDAR" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="DEPARTURE_DATE_ID" msprop:design-time-name="f5cab533-9b8a-48d8-bcc9-c036c6562d5b" msprop:DbColumnName="DEPARTURE_DATE_ID" msprop:FriendlyName="DEPARTURE_DATE_ID" type="xs:dateTime" />
+                  <xs:element name="DEPARTURE_QUARTER" msprop:design-time-name="a39588ce-b5a8-4756-ab8d-59fa0480603c" msprop:DbColumnName="DEPARTURE_QUARTER" msprop:FriendlyName="DEPARTURE_QUARTER" type="xs:int" />
+                  <xs:element name="DEPARTURE_DAY_OF_WEEK" msprop:design-time-name="9ac0065a-efa2-487d-b047-8c0c7d5c89ad" msprop:DbColumnName="DEPARTURE_DAY_OF_WEEK" msprop:FriendlyName="DEPARTURE_DAY_OF_WEEK" type="xs:int" />
+                  <xs:element name="DEPARTURE_NAME_DAY" msprop:design-time-name="0a745ddb-42c3-4a10-a815-5e795589f3d4" msprop:DbColumnName="DEPARTURE_NAME_DAY" msprop:FriendlyName="DEPARTURE_NAME_DAY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEPARTURE_LEAP_YEAR" msprop:design-time-name="183fce8c-1275-450c-9ee1-2fa5f13aba23" msprop:DbColumnName="DEPARTURE_LEAP_YEAR" msprop:FriendlyName="DEPARTURE_LEAP_YEAR" type="xs:int" />
+                  <xs:element name="DEPARTURE_DAY" msprop:design-time-name="4c4426de-224a-4eb6-a2f9-25c7fea56efd" msprop:DbColumnName="DEPARTURE_DAY" msprop:FriendlyName="DEPARTURE_DAY" type="xs:int" />
+                  <xs:element name="DEPARTURE_MONTH" msprop:design-time-name="a0819dd9-3656-4895-af9d-314a04d52ae9" msprop:DbColumnName="DEPARTURE_MONTH" msprop:FriendlyName="DEPARTURE_MONTH" type="xs:int" />
+                  <xs:element name="DEPARTURE_YEAR" msprop:design-time-name="4caed6a4-e6d6-4623-8515-476a392afd0d" msprop:DbColumnName="DEPARTURE_YEAR" msprop:FriendlyName="DEPARTURE_YEAR" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_DEPARTURE_AIRPORT" msprop:design-time-name="629cd20b-1f98-49f5-b1da-9dfdd02581d6" msprop:DbTableName="DIM_DEPARTURE_AIRPORT" msprop:FriendlyName="DIM_DEPARTURE_AIRPORT" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IATA_DEP_AIRPORT_ID" msprop:design-time-name="af0ed7bb-4cac-4883-b1f2-62579c0c6b28" msprop:DbColumnName="IATA_DEP_AIRPORT_ID" msprop:FriendlyName="IATA_DEP_AIRPORT_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEPARTURE_AIRPORT_NAME" msprop:design-time-name="18f105f0-3468-452a-8a2e-048e32239fe4" msprop:DbColumnName="DEPARTURE_AIRPORT_NAME" msprop:FriendlyName="DEPARTURE_AIRPORT_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEPARTURE_CITY" msprop:design-time-name="d5c779d1-eb66-4a65-962d-f02a98e1c0be" msprop:DbColumnName="DEPARTURE_CITY" msprop:FriendlyName="DEPARTURE_CITY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEP_COUNTRY" msprop:design-time-name="94e071a9-9185-4add-be6d-7773491f4b48" msprop:DbColumnName="DEP_COUNTRY" msprop:FriendlyName="DEP_COUNTRY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEP_TIMEZONE" msprop:design-time-name="e4fcb84a-8a9e-4407-aa5a-48cd428f758a" msprop:DbColumnName="DEP_TIMEZONE" msprop:FriendlyName="DEP_TIMEZONE" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_ARRIVAL_TIME" msprop:design-time-name="b5d27ad0-9100-48ee-941c-9188870ed4fb" msprop:DbTableName="DIM_ARRIVAL_TIME" msprop:FriendlyName="DIM_ARRIVAL_TIME" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ARR_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="5a488c55-37f8-4485-a0e9-0270ce176eca" msprop:DbColumnName="ARR_TIME_ID" msprop:FriendlyName="ARR_TIME_ID" type="xs:anyType" />
+                  <xs:element name="ARR_TIME_HOUR" msprop:design-time-name="afc8b331-281c-414d-ac45-4f98f053e57a" msprop:DbColumnName="ARR_TIME_HOUR" msprop:FriendlyName="ARR_TIME_HOUR" type="xs:int" />
+                  <xs:element name="ARR_TIME_MINUTE" msprop:design-time-name="af28452d-3259-44f9-802b-e5082d393c7c" msprop:DbColumnName="ARR_TIME_MINUTE" msprop:FriendlyName="ARR_TIME_MINUTE" type="xs:int" />
+                  <xs:element name="ARR_TIME_SECOND" msprop:design-time-name="51af60a5-6b96-4690-82b8-68c38ba108e4" msprop:DbColumnName="ARR_TIME_SECOND" msprop:FriendlyName="ARR_TIME_SECOND" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_ARRIVAL_AIRPORT" msprop:design-time-name="e5a1cf4f-a842-42f1-9f7c-35f1b6dab9bc" msprop:DbTableName="DIM_ARRIVAL_AIRPORT" msprop:FriendlyName="DIM_ARRIVAL_AIRPORT" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IATA_ARR_AIRPORT_ID" msprop:design-time-name="2bdc90d7-80a6-42bf-b4ad-567dba24ba12" msprop:DbColumnName="IATA_ARR_AIRPORT_ID" msprop:FriendlyName="IATA_ARR_AIRPORT_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ARRIVAL_AIRPORT_NAME" msprop:design-time-name="5d27e6b7-a6c0-4716-a511-fd19d76cd397" msprop:DbColumnName="ARRIVAL_AIRPORT_NAME" msprop:FriendlyName="ARRIVAL_AIRPORT_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ARRIVAL_CITY" msprop:design-time-name="bdfcc9ba-67bf-44d3-980e-01419d4b5e08" msprop:DbColumnName="ARRIVAL_CITY" msprop:FriendlyName="ARRIVAL_CITY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ARRIVAL_COUNTRY" msprop:design-time-name="54c7ffa5-fa5d-450e-a79a-3e9510e6235b" msprop:DbColumnName="ARRIVAL_COUNTRY" msprop:FriendlyName="ARRIVAL_COUNTRY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ARRIVAL_TIMEZONE" msprop:design-time-name="c0004d5d-68a2-4ca7-b284-7bdeae9a3a93" msprop:DbColumnName="ARRIVAL_TIMEZONE" msprop:FriendlyName="ARRIVAL_TIMEZONE" type="xs:decimal" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_AIRLINE" msprop:design-time-name="0c51419d-e4d7-4076-a990-3ee93504f76c" msprop:DbTableName="DIM_AIRLINE" msprop:FriendlyName="DIM_AIRLINE" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="IATA_REPORTING_AIRLINE" msprop:design-time-name="5a8c1e5f-2f98-4480-8882-84cd3377677b" msprop:DbColumnName="IATA_REPORTING_AIRLINE" msprop:FriendlyName="IATA_REPORTING_AIRLINE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="AIRLINE_NAME" msprop:design-time-name="52369456-81e5-4b16-903f-2d6c14363163" msprop:DbColumnName="AIRLINE_NAME" msprop:FriendlyName="AIRLINE_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OFFICE_COUNTRY" msprop:design-time-name="5ba4bd63-90b6-40d5-9cdd-77b7bb94a5f2" msprop:DbColumnName="OFFICE_COUNTRY" msprop:FriendlyName="OFFICE_COUNTRY">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ACTIVE" msprop:design-time-name="3fe7effe-203d-47fe-89ee-1711cc3f8982" msprop:DbColumnName="ACTIVE" msprop:FriendlyName="ACTIVE" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="2" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_FACT_FLIGHT" msprop:design-time-name="f6ba2f8e-0f23-4f0a-8baf-44cfee321731" msprop:DbTableName="FACT_FLIGHT" msprop:FriendlyName="FACT_FLIGHT" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="FLIGHT_ID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="c98e1cd8-a58d-4a6a-9e44-b825af30b8d0" msprop:DbColumnName="FLIGHT_ID" msprop:FriendlyName="FLIGHT_ID" type="xs:int" />
+                  <xs:element name="DEPARTURE_DATE_ID" msprop:design-time-name="e3e0f74d-5fa8-43d0-938f-157bf5795560" msprop:DbColumnName="DEPARTURE_DATE_ID" msprop:FriendlyName="DEPARTURE_DATE_ID" type="xs:dateTime" />
+                  <xs:element name="IATA_REPORTING_AIRLINE" msprop:design-time-name="c58de283-b658-479c-9af1-e555f4a350a4" msprop:DbColumnName="IATA_REPORTING_AIRLINE" msprop:FriendlyName="IATA_REPORTING_AIRLINE">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="3" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IATA_DEP_AIRPORT_ID" msprop:design-time-name="6bae662b-103b-4049-acf0-a5f461b545a8" msprop:DbColumnName="IATA_DEP_AIRPORT_ID" msprop:FriendlyName="IATA_DEP_AIRPORT_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="IATA_ARR_AIRPORT_ID" msprop:design-time-name="b7fc1460-3b13-4562-b6a0-b3f36c4f04af" msprop:DbColumnName="IATA_ARR_AIRPORT_ID" msprop:FriendlyName="IATA_ARR_AIRPORT_ID">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="4" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="TAIL_NUMBER" msprop:design-time-name="d8294116-9900-4197-a7b5-4cd6b58d95c0" msprop:DbColumnName="TAIL_NUMBER" msprop:FriendlyName="TAIL_NUMBER">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="7" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEP_CITY_NAME" msprop:design-time-name="e2e4ec6d-afef-41cd-8ef4-8497be5a2004" msprop:DbColumnName="DEP_CITY_NAME" msprop:FriendlyName="DEP_CITY_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ARR_CITY_NAME" msprop:design-time-name="748cd745-e422-417c-8b3d-6eb41d160a29" msprop:DbColumnName="ARR_CITY_NAME" msprop:FriendlyName="ARR_CITY_NAME">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="DEP_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="7c44cd2c-067a-4bbf-998a-b4f32f0ace14" msprop:DbColumnName="DEP_TIME_ID" msprop:FriendlyName="DEP_TIME_ID" type="xs:anyType" />
+                  <xs:element name="DEPARTURE_DELAY" msprop:design-time-name="d1f7d976-c3e8-414c-905c-85d61aebf7f0" msprop:DbColumnName="DEPARTURE_DELAY" msprop:FriendlyName="DEPARTURE_DELAY" type="xs:decimal" />
+                  <xs:element name="W_OFF_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="9aadaeef-e6ce-4341-b8a4-39e9adad39a3" msprop:DbColumnName="W_OFF_TIME_ID" msprop:FriendlyName="W_OFF_TIME_ID" type="xs:anyType" />
+                  <xs:element name="W_ON_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="07cc9c4c-fdad-4837-ae3b-c620ec5b53f0" msprop:DbColumnName="W_ON_TIME_ID" msprop:FriendlyName="W_ON_TIME_ID" type="xs:anyType" />
+                  <xs:element name="ARR_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="8761d11d-a999-4407-8427-ad725c406d76" msprop:DbColumnName="ARR_TIME_ID" msprop:FriendlyName="ARR_TIME_ID" type="xs:anyType" />
+                  <xs:element name="ARRIVE_DELAY" msprop:design-time-name="40174643-b0d7-40c8-916e-9f72c1a558c9" msprop:DbColumnName="ARRIVE_DELAY" msprop:FriendlyName="ARRIVE_DELAY" type="xs:decimal" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_WHEELS_ON_TIME" msprop:design-time-name="c9618f64-7e05-4549-9cec-3e1cc1dd29bd" msprop:DbTableName="DIM_WHEELS_ON_TIME" msprop:FriendlyName="DIM_WHEELS_ON_TIME" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="W_ON_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="9f030e68-7aaf-4384-9e09-9768ba0ae579" msprop:DbColumnName="W_ON_TIME_ID" msprop:FriendlyName="W_ON_TIME_ID" type="xs:anyType" />
+                  <xs:element name="W_ON_TIME_HOUR" msprop:design-time-name="97915055-538f-44fa-87c7-15f5afa9bc5c" msprop:DbColumnName="W_ON_TIME_HOUR" msprop:FriendlyName="W_ON_TIME_HOUR" type="xs:int" />
+                  <xs:element name="W_ON_TIME_MINUTE" msprop:design-time-name="d47b44d8-2307-4ab0-8fff-4708ecaffc61" msprop:DbColumnName="W_ON_TIME_MINUTE" msprop:FriendlyName="W_ON_TIME_MINUTE" type="xs:int" />
+                  <xs:element name="W_ON_TIME_SECOND" msprop:design-time-name="62d9a879-0670-40a3-b3be-89fbdec0c27c" msprop:DbColumnName="W_ON_TIME_SECOND" msprop:FriendlyName="W_ON_TIME_SECOND" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="warehouse_DIM_WHEELS_OFF_TIME" msprop:design-time-name="1b14c544-f1a4-4565-a369-6f22eb292323" msprop:DbTableName="DIM_WHEELS_OFF_TIME" msprop:FriendlyName="DIM_WHEELS_OFF_TIME" msprop:DbSchemaName="warehouse" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="W_OFF_TIME_ID" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:design-time-name="78edd208-340b-48b3-9528-5fe57fbb2839" msprop:DbColumnName="W_OFF_TIME_ID" msprop:FriendlyName="W_OFF_TIME_ID" type="xs:anyType" />
+                  <xs:element name="W_OFF_TIME_HOUR" msprop:design-time-name="6fbde31d-dd51-4c27-b374-3b1dc0f3af66" msprop:DbColumnName="W_OFF_TIME_HOUR" msprop:FriendlyName="W_OFF_TIME_HOUR" type="xs:int" />
+                  <xs:element name="W_OFF_TIME_MIUTE" msprop:design-time-name="6f81d661-d4c2-4da7-8108-edf2cfc9b857" msprop:DbColumnName="W_OFF_TIME_MIUTE" msprop:FriendlyName="W_OFF_TIME_MIUTE" type="xs:int" />
+                  <xs:element name="W_OFF_TIME_SECOND" msprop:design-time-name="623bdb3b-de26-492d-90e7-e37be387bca8" msprop:DbColumnName="W_OFF_TIME_SECOND" msprop:FriendlyName="W_OFF_TIME_SECOND" type="xs:int" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_ROUTE" />
+          <xs:field xpath="IATA_DEP_AIRPORT_ID" />
+          <xs:field xpath="IATA_ARR_AIRPORT_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_DEPARTURE_TIME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_DEPARTURE_TIME" />
+          <xs:field xpath="DEP_TIME_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_DEPARTURE_CALENDAR_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_DEPARTURE_CALENDAR" />
+          <xs:field xpath="DEPARTURE_DATE_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_DEPARTURE_AIRPORT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_DEPARTURE_AIRPORT" />
+          <xs:field xpath="IATA_DEP_AIRPORT_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_ARRIVAL_TIME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_ARRIVAL_TIME" />
+          <xs:field xpath="ARR_TIME_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_ARRIVAL_AIRPORT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_ARRIVAL_AIRPORT" />
+          <xs:field xpath="IATA_ARR_AIRPORT_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_AIRLINE_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_AIRLINE" />
+          <xs:field xpath="IATA_REPORTING_AIRLINE" />
+        </xs:unique>
+        <xs:unique name="warehouse_FACT_FLIGHT_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="FLIGHT_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_WHEELS_ON_TIME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_WHEELS_ON_TIME" />
+          <xs:field xpath="W_ON_TIME_ID" />
+        </xs:unique>
+        <xs:unique name="warehouse_DIM_WHEELS_OFF_TIME_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//warehouse_DIM_WHEELS_OFF_TIME" />
+          <xs:field xpath="W_OFF_TIME_ID" />
+        </xs:unique>
+        <xs:keyref name="FK_FACT_FLI_FK_W_OFF__DIM_WHEE" refer="warehouse_DIM_WHEELS_OFF_TIME_Constraint1">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="W_OFF_TIME_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_FLI_FK_DEPART_DIM_DEPA" refer="warehouse_DIM_DEPARTURE_CALENDAR_Constraint1">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="DEPARTURE_DATE_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_FLI_FK_ARR_TI_DIM_ARRI" refer="warehouse_DIM_ARRIVAL_TIME_Constraint1">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="ARR_TIME_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_FLI_FK_W_ON_F_DIM_WHEE" refer="warehouse_DIM_WHEELS_ON_TIME_Constraint1">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="W_ON_TIME_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_FLI_FK_DEP_TI_DIM_DEPA" refer="warehouse_DIM_DEPARTURE_TIME_Constraint1">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="DEP_TIME_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_FLI_FK_AIRLIN_DIM_AIRL" refer="warehouse_DIM_AIRLINE_Constraint1">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="IATA_REPORTING_AIRLINE" />
+        </xs:keyref>
+        <xs:keyref name="FK_FACT_FLI_FK_ROUTE__DIM_ROUT" refer="Constraint1">
+          <xs:selector xpath=".//warehouse_FACT_FLIGHT" />
+          <xs:field xpath="IATA_DEP_AIRPORT_ID" />
+          <xs:field xpath="IATA_ARR_AIRPORT_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_DIM_ROUT_FK_DEP_AI_DIM_DEPA" refer="warehouse_DIM_DEPARTURE_AIRPORT_Constraint1">
+          <xs:selector xpath=".//warehouse_DIM_ROUTE" />
+          <xs:field xpath="IATA_DEP_AIRPORT_ID" />
+        </xs:keyref>
+        <xs:keyref name="FK_DIM_ROUT_FK_ARR_AI_DIM_ARRI" refer="warehouse_DIM_ARRIVAL_AIRPORT_Constraint1">
+          <xs:selector xpath=".//warehouse_DIM_ROUTE" />
+          <xs:field xpath="IATA_ARR_AIRPORT_ID" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <WATOSTATECZNAHURTOWNIA xmlns="" />
+  </Schema>
+</DataSourceView>

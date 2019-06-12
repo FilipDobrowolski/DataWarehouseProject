@@ -1,0 +1,1650 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b6a9967a-5fc0-4221-ac24-ad55a99a55e8" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>WATOSTATECZNAHURTOWNIA</ID>
+  <Name>WATOSTATECZNAHURTOWNIA</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="20" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5016" scrolltop="590" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="23093" y="15028" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee00009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_WHEELS_OFF_TIME" left="898" top="12307" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4339" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000f310000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_WHEELS_OFF_TIME" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ARRIVAL_TIME" left="14927" top="9954" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3937" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000610f000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_ARRIVAL_TIME" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_WHEELS_ON_TIME" left="4818" top="19368" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="4212" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00007410000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_WHEELS_ON_TIME" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FACT_FLIGHT" left="7637" top="10961" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="4890" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00001a13000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_FACT_FLIGHT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ROUTE" left="380" top="5067" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="4403" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00003311000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_ROUTE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DEPARTURE_CALENDAR" left="14917" top="3807" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="5228" height="3747" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00006c140000a30e0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_DEPARTURE_CALENDAR" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_ARRIVAL_AIRPORT" left="20" top="0" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="4763" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00009b1200006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_ARRIVAL_AIRPORT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_AIRLINE" left="14927" top="14661" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="4890" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00001a13000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_AIRLINE" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DEPARTURE_TIME" left="11430" top="19368" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="3916" height="2307" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004c0f000003090000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_DEPARTURE_TIME" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DIM_DEPARTURE_AIRPORT" left="7183" top="4887" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="5334" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000d61400006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="warehouse_DIM_DEPARTURE_AIRPORT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4937" top="13061" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FLI_FK_W_OFF__DIM_WHEE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="4" sourceattachpoint="17" destattachpoint="26" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5237" y="13460" />
+              <point x="6437" y="13460" />
+              <point x="6437" y="13461" />
+              <point x="7637" y="13461" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="12227" top="10708" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="3000" height="1953" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FLI_FK_ARR_TI_DIM_ARRI]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="4" sourceattachpoint="16" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14927" y="11107" />
+              <point x="13727" y="11107" />
+              <point x="13727" y="12361" />
+              <point x="12527" y="12361" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="6525" top="15661" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="2757" height="4207" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FLI_FK_W_ON_F_DIM_WHEE]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="4" sourceattachpoint="6" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6924" y="19368" />
+              <point x="6924" y="17665" />
+              <point x="8982" y="17665" />
+              <point x="8982" y="15961" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2182" top="6875" logicalid="14" controlid="14" masterid="0" hint1="0" hint2="0" width="7100" height="4386" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FLI_FK_ROUTE__DIM_ROUT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="4" sourceattachpoint="7" destattachpoint="4" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2581" y="7374" />
+              <point x="2581" y="9167" />
+              <point x="8982" y="9167" />
+              <point x="8982" y="10961" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="12227" top="13711" logicalid="15" controlid="15" masterid="0" hint1="0" hint2="0" width="3000" height="2503" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FLI_FK_AIRLIN_DIM_AIRL]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="4" sourceattachpoint="20" destattachpoint="29" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14927" y="15814" />
+              <point x="13727" y="15814" />
+              <point x="13727" y="14011" />
+              <point x="12527" y="14011" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10332" top="15661" logicalid="16" controlid="16" masterid="0" hint1="0" hint2="0" width="3456" height="4207" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FLI_FK_DEP_TI_DIM_DEPA]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="4" sourceattachpoint="6" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13388" y="19368" />
+              <point x="13388" y="17665" />
+              <point x="10632" y="17665" />
+              <point x="10632" y="15961" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10332" top="7055" logicalid="17" controlid="17" masterid="0" hint1="0" hint2="0" width="7599" height="4206" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_FACT_FLI_FK_DEPART_DIM_DEPA]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="4" sourceattachpoint="9" destattachpoint="10" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="17531" y="7554" />
+              <point x="17531" y="9257" />
+              <point x="10632" y="9257" />
+              <point x="10632" y="10961" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="2002" top="2168" logicalid="18" controlid="18" masterid="0" hint1="0" hint2="0" width="879" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DIM_ROUT_FK_ARR_AI_DIM_ARRI]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="5" sourceattachpoint="9" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2401" y="2667" />
+              <point x="2401" y="3867" />
+              <point x="2581" y="3867" />
+              <point x="2581" y="5067" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="4483" top="5821" logicalid="19" controlid="19" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_DIM_ROUT_FK_DEP_AI_DIM_DEPA]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="5" sourceattachpoint="22" destattachpoint="17" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7183" y="6220" />
+              <point x="4783" y="6220" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-5016</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>590</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>75</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="5d2b8aa2-cc7c-4cfa-9ad1-4ea5893df837">
+      <ID>DIM ROUTE</ID>
+      <Name>DIM ROUTE</Name>
+      <DimensionID>DIM ROUTE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="60a1e98c-c79d-4967-bb15-dc5e2635ffed">
+          <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="89f2977c-bab2-43d5-a703-3fa16d80999f">
+          <AttributeID>CODESHARE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f9493dac-e47d-4be7-a315-9adbff722f42">
+          <AttributeID>STOPS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d97abae-aab9-4e7a-b721-0a35ea804297">
+          <AttributeID>IATA ARR AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35464be6-9bc9-4806-8c96-3063edb303ff">
+          <AttributeID>ARRIVAL AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b1c32537-4e0e-4fc1-9ed9-2e6e59dd300c">
+          <AttributeID>ARRIVAL CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e02822e8-1fae-4dad-bbfe-3d9272e937c3">
+          <AttributeID>ARRIVAL COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c6210a66-be2f-4414-8be6-6fc2728753ec">
+          <AttributeID>ARRIVAL TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b752c4c5-5b6a-41c7-a3f5-d021854b4246">
+          <AttributeID>DIM DEPARTURE AIRPORT - IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f200c291-e4e7-47ce-864e-28e0eb8d9a93">
+          <AttributeID>DEPARTURE AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="606fc7e8-a404-4b29-ad64-d0976b29af4b">
+          <AttributeID>DEPARTURE CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7321db5a-42b2-40a8-8df6-64a802a46f41">
+          <AttributeID>DEP COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="236cacdf-4f35-404d-a2f3-bfe2e09004b5">
+          <AttributeID>DEP TIMEZONE</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="6a1b8d71-05a0-49ef-bc73-2ddd6cc8d714">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="561ec68b-db3a-4cb9-968a-4245eeb1b646">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="b4f8e0b3-bd1f-4451-bcdd-1d997332c1cb">
+      <ID>IATA ARR AIRPORT</ID>
+      <Name>IATA ARR AIRPORT</Name>
+      <DimensionID>DIM ROUTE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="144442cc-c3a0-4d83-9f09-6cce169d59cf">
+          <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="54fd0577-f50a-4ebc-9070-c87a677626e6">
+          <AttributeID>CODESHARE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4386e5b0-6e45-4a73-8330-334eff51e3ce">
+          <AttributeID>STOPS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ebe9b8b-6536-4876-885f-78a26056d496">
+          <AttributeID>IATA ARR AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d63e41c-af1c-45a8-9ce8-c0782fcb438e">
+          <AttributeID>ARRIVAL AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d0318f0e-ddb1-4d9a-b652-aa4bcdd3f04c">
+          <AttributeID>ARRIVAL CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="89c9f1e8-6ced-4b2e-8b52-84f93718fd23">
+          <AttributeID>ARRIVAL COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9bb358ab-876a-453b-85b3-eef1b7da07f8">
+          <AttributeID>ARRIVAL TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="71ab976c-ef02-423c-8e79-9a49ea09379c">
+          <AttributeID>DIM DEPARTURE AIRPORT - IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="49bf8ff7-c63d-41da-af53-a0dc756bbc95">
+          <AttributeID>DEPARTURE AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a4ecc41e-3459-454d-bc37-d03f8f437fdb">
+          <AttributeID>DEPARTURE CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0bf5acd7-0759-4a84-91c0-30cf2bbd99c1">
+          <AttributeID>DEP COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c8191b3d-10f2-4cc9-9c6a-494a4eb99c0f">
+          <AttributeID>DEP TIMEZONE</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="18759e7a-2cb4-42cb-96ec-a106bf0167c2">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="fb1ab03d-8fc4-4033-9dfa-a7b9c0db5652">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="9ab2cf85-4e94-4f95-90de-3ac3fd009580">
+      <ID>FACT FLIGHT</ID>
+      <Name>FACT FLIGHT</Name>
+      <DimensionID>FACT FLIGHT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b66fae04-bfdc-43fe-8e6a-b447cb665aa9">
+          <AttributeID>FLIGHT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="31e312bc-3745-47a8-8d4f-434535bb5eee">
+          <AttributeID>TAIL NUMBER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e50c1284-4d1c-4478-a5a2-19e19800dd2f">
+          <AttributeID>DEP CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="61a24c2b-c432-47b2-a7e9-e4f4725b8e4c">
+          <AttributeID>ARR CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5157ba18-c1be-409c-94b3-e221446e510a">
+          <AttributeID>DEPARTURE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2cf717fc-474a-4ee9-bf71-8680f14c5c7c">
+          <AttributeID>ARRIVE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ad63efcc-0e6e-4e72-85df-60a00080d158">
+          <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="45442bc2-7cc6-4afd-88f6-76b7c2272dee">
+          <AttributeID>CODESHARE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae044e0c-c856-451c-9ddf-c90876335568">
+          <AttributeID>STOPS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ef43b95-afa8-45a1-a1f9-c9884e0a65da">
+          <AttributeID>IATA ARR AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="903d778d-59e7-4a56-b37e-673daf074f44">
+          <AttributeID>ARRIVAL AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="99ba0c98-6080-45fc-82e7-b3a6804895c9">
+          <AttributeID>ARRIVAL CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e31a210-5344-4875-bb33-7a1d73d04371">
+          <AttributeID>ARRIVAL COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="79aa4f14-31a2-4a86-be66-93bf84832183">
+          <AttributeID>ARRIVAL TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c7c26722-8051-4ead-854f-015493b6f090">
+          <AttributeID>DIM DEPARTURE AIRPORT - IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7b0e1953-4628-48f5-80d7-6e40610b5cb7">
+          <AttributeID>DEPARTURE AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1df8beea-d5f0-4948-a6d4-fc4a04b2eb68">
+          <AttributeID>DEPARTURE CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9761f220-a90c-46cb-8ec3-d71bbc2ac02c">
+          <AttributeID>DEP COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6901997a-c26a-43be-9c6a-68100f5dd17c">
+          <AttributeID>DEP TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f40dfd9-5a7c-4baf-aa42-f610a3dfa4b1">
+          <AttributeID>IATA REPORTING AIRLINE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="78ce29d1-ed66-480a-9e4b-4e636fdff3e8">
+          <AttributeID>AIRLINE NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6574866c-e963-48a5-9ed8-750953abec91">
+          <AttributeID>OFFICE COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c7d6e30-3e43-4006-943b-2b7c130879b1">
+          <AttributeID>ACTIVE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="82e6d536-b968-4dc4-9454-aed03b834fdd">
+          <AttributeID>DEP TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d561397-8a26-4650-94e3-2f0e8ee6cdcb">
+          <AttributeID>DEP TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="10cfd0ea-49da-4be0-8b73-4c014d9ef175">
+          <AttributeID>DEP TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b9797aec-3625-4330-bd50-7f08b4c42e55">
+          <AttributeID>DEP TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3229ab98-9e89-447d-a72b-94cac431690f">
+          <AttributeID>W ON TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2614d950-5f93-4eb4-ab24-886881c775c0">
+          <AttributeID>W ON TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8de80147-5aa7-4f7a-8b2c-c90cda709c63">
+          <AttributeID>W ON TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="190e3e3e-dc5c-43e8-8b90-61e824ce9fcd">
+          <AttributeID>W ON TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d67457b-23d3-414e-bab4-128cb513dd5f">
+          <AttributeID>ARR TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19fc134f-5b97-4f09-b174-5d2050966263">
+          <AttributeID>ARR TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="88305945-df44-40bb-b66a-765fae85b550">
+          <AttributeID>ARR TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46ae542b-881d-470c-af7d-275dccbf4362">
+          <AttributeID>ARR TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e997ba07-de2b-4b00-8d16-4e09b726ac8d">
+          <AttributeID>DEPARTURE DATE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4fa4d89f-3bb5-4233-9af6-dc41f7ddeff2">
+          <AttributeID>DEPARTURE QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e5d827cc-b8c0-4d18-9d65-19979952f9d2">
+          <AttributeID>DEPARTURE DAY OF WEEK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e02ab40c-c28b-4e88-9e1d-f3e580976779">
+          <AttributeID>DEPARTURE NAME DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7c84183d-8cfd-49c1-be7f-49e36117778a">
+          <AttributeID>DEPARTURE LEAP YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="84dddcd4-bfa4-4909-8814-40183fc0b51a">
+          <AttributeID>DEPARTURE DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5bc8945-82c8-4a40-8a88-53ed75f09c14">
+          <AttributeID>DEPARTURE MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c82f9d1e-d507-4f95-b53b-1f54b4c50f5e">
+          <AttributeID>DEPARTURE YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3e24fbc-8e0a-4715-a480-3098d4afc6dc">
+          <AttributeID>W OFF TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fadef41f-a73e-42b5-bf17-07e0ec00aba4">
+          <AttributeID>W OFF TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05ea5f07-88a6-45e0-a7b4-460efdacc9a0">
+          <AttributeID>W OFF TIME MIUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47653fe0-b4fe-421f-beef-87d81a6b2052">
+          <AttributeID>W OFF TIME SECOND</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="307af533-188b-4366-95f8-39816a1d69b1">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="04eee71f-c5f1-49d9-bc22-e0c53283df6f">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="e76a438f-8bc7-4a38-960d-21d799e9d2ed">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="3f9db8f4-d924-4381-97d1-79994d5a0c4e">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="82ad651d-1483-4564-a562-c4b00d95264e">
+      <ID>DIM AIRLINE</ID>
+      <Name>DIM AIRLINE</Name>
+      <DimensionID>DIM AIRLINE</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3a720793-75d9-4cb2-b59a-dede0b5de38b">
+          <AttributeID>IATA REPORTING AIRLINE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd3a9e5a-2d0d-4b24-a34e-84911b2701aa">
+          <AttributeID>AIRLINE NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="443ae399-4a04-4fac-aa24-81d084972320">
+          <AttributeID>OFFICE COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e1e03e4-8366-4f36-bfdc-6f9adca1bf1e">
+          <AttributeID>ACTIVE</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4c5c577e-350e-4ef3-821e-59713a908075">
+      <ID>DEP TIME</ID>
+      <Name>DEP TIME</Name>
+      <DimensionID>FACT FLIGHT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3446e0b7-0b46-446b-a24a-100d2f7a48ed">
+          <AttributeID>FLIGHT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30d030e2-5333-49be-b998-eb33332b1c9e">
+          <AttributeID>TAIL NUMBER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0bc546c9-9885-4e5e-8460-f43eced699a1">
+          <AttributeID>DEP CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5fe6c2bb-f1cb-4177-8403-c83eea99976e">
+          <AttributeID>ARR CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6418f753-6d52-4296-8cdc-3b85f5cbf853">
+          <AttributeID>DEPARTURE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ab4f61eb-165f-41a1-bca3-64a37f232949">
+          <AttributeID>ARRIVE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e9c9b2ff-06d5-4c2b-9aa2-927bbbbeda99">
+          <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68b499fd-f3df-4a03-9cb0-c6aa4f8e104c">
+          <AttributeID>CODESHARE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="05de2ef1-23d7-48f1-95ed-22029e16acd4">
+          <AttributeID>STOPS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f289397b-1361-4f6a-ba58-a104974a12d0">
+          <AttributeID>IATA ARR AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d2e64a5b-90ec-4648-b766-62b71a4d6e64">
+          <AttributeID>ARRIVAL AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2cdc55c1-c720-4709-85d1-8d65f4c2fd06">
+          <AttributeID>ARRIVAL CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ddec9490-2b1a-4860-a912-a4ba7436a91a">
+          <AttributeID>ARRIVAL COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e24628c-3129-4afc-988f-6d9d822d82b3">
+          <AttributeID>ARRIVAL TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64e73baf-8a97-4800-8406-1813b0239836">
+          <AttributeID>DIM DEPARTURE AIRPORT - IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b331bc50-1d0e-4371-b1a3-e45c2385a0fe">
+          <AttributeID>DEPARTURE AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bc1fbd65-1765-46c1-ac7b-9022580ee8a4">
+          <AttributeID>DEPARTURE CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="48acbdb8-f2dc-4340-852e-f11e42c4ed9b">
+          <AttributeID>DEP COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="df752a4b-3e4e-4a0c-ae37-95342bd592b8">
+          <AttributeID>DEP TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="500c23e7-4c9c-4db4-8c03-1b6a7347c9c2">
+          <AttributeID>IATA REPORTING AIRLINE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6af739e7-6d99-4592-927d-9781b4feec5e">
+          <AttributeID>AIRLINE NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="416c69d7-c6a5-43c3-84fe-0263044e92ba">
+          <AttributeID>OFFICE COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1e06d3c-15a5-4105-93f7-d57e6bbe5d03">
+          <AttributeID>ACTIVE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="16ebf645-a69f-454b-ae81-5d3fc6b3c785">
+          <AttributeID>DEP TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9024ca3e-efd6-4db5-8021-177207b2c59a">
+          <AttributeID>DEP TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6677f12f-6179-45fa-9379-f24f49a0136a">
+          <AttributeID>DEP TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="789f4f2e-5f52-4ab2-9d0d-5c5bd1b573d9">
+          <AttributeID>DEP TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b1e9017-fd2d-4a0e-a7cc-5cc991a641da">
+          <AttributeID>W ON TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d4a7d9d-dd68-4a8b-8678-e0b44074f2ed">
+          <AttributeID>W ON TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d882861-8bef-4bf9-9fff-146c6a861131">
+          <AttributeID>W ON TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c74a33c7-f325-4d2a-864d-2b2822f741b1">
+          <AttributeID>W ON TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6937b7cc-2058-47ef-a896-e7a0d1a64382">
+          <AttributeID>ARR TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0bd18194-e1eb-4ccb-a050-7f80acbb70f8">
+          <AttributeID>ARR TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d890420e-d796-455a-896a-9d078cf5d8f8">
+          <AttributeID>ARR TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec2e5dee-46c8-4674-8898-3e71e7e0f04e">
+          <AttributeID>ARR TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a50aaa3-5be4-4038-bdf4-cf8dfb20c74c">
+          <AttributeID>DEPARTURE DATE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4c9ca574-4880-4802-9c5b-5dac59d414ff">
+          <AttributeID>DEPARTURE QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2863d21e-13fe-48ac-886e-baac0639a9ef">
+          <AttributeID>DEPARTURE DAY OF WEEK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b9b61262-3bb5-40f8-88cd-d3709091f230">
+          <AttributeID>DEPARTURE NAME DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fdc5a282-a477-4fc2-aea2-8d7dd27ef6cf">
+          <AttributeID>DEPARTURE LEAP YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8a28c0c3-1251-4f42-bc73-16b3bf658d84">
+          <AttributeID>DEPARTURE DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="39e63803-887f-4814-ac21-c063bfa7f96d">
+          <AttributeID>DEPARTURE MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f787f0f-5e49-4b6d-96cd-a4ac71dc9179">
+          <AttributeID>DEPARTURE YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a24186d5-db68-4b71-baff-48f30e7d7b60">
+          <AttributeID>W OFF TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d5b94db0-4de1-4457-907a-1a2cfc3699ae">
+          <AttributeID>W OFF TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="55b92aad-b6ba-479d-a3d6-64516bb52efa">
+          <AttributeID>W OFF TIME MIUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7748501c-fd6c-41f5-a826-d24c0ab653f1">
+          <AttributeID>W OFF TIME SECOND</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="46c752f5-3506-450a-913a-2770261b839b">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="b7ea226f-94b3-457f-9197-3b8d7707414f">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="9b8bb7dd-c28b-4928-b43e-e330cffded13">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="90c9ebb2-4563-4586-bbe1-626d5710773c">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="b3c5cb2c-034d-4088-9181-5812cb0e6c55">
+      <ID>W ON TIME</ID>
+      <Name>W ON TIME</Name>
+      <DimensionID>FACT FLIGHT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="56713202-f4c5-4fe1-96c7-b2f9b8acca8b">
+          <AttributeID>FLIGHT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd5fdfa7-4ef2-4689-a461-d3f8bf3c8885">
+          <AttributeID>TAIL NUMBER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5810279b-cad1-459b-a953-6d2598597b19">
+          <AttributeID>DEP CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f72667d8-f8d5-48ad-b1f7-2cceb6cbf68a">
+          <AttributeID>ARR CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="994adc93-b6e9-4994-8882-bfbe240f0f5c">
+          <AttributeID>DEPARTURE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47670c2e-47b5-4e77-87fa-91c6a86eb83f">
+          <AttributeID>ARRIVE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="93958f9f-0c7f-4ca4-b69f-6f88a88802c4">
+          <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f8d73ea3-a36b-4dd3-8fee-953338e3e068">
+          <AttributeID>CODESHARE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eaef2fca-1947-4757-83ed-2a337683483e">
+          <AttributeID>STOPS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11e251d7-1b81-436a-a649-7ef3df314923">
+          <AttributeID>IATA ARR AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1f6f87c-3d9e-4616-9619-07ca93a86293">
+          <AttributeID>ARRIVAL AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fc7a29cb-6426-4d96-b2dc-26ed884e0c71">
+          <AttributeID>ARRIVAL CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0e6bc049-91c0-4e43-bd3b-3cfb98192585">
+          <AttributeID>ARRIVAL COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91200a90-2a26-4f10-bcb4-95390a9278b0">
+          <AttributeID>ARRIVAL TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f275dfd6-8fd6-4c93-bf76-ad89978d78e7">
+          <AttributeID>DIM DEPARTURE AIRPORT - IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="72893948-a064-4339-a2b3-a013970767d4">
+          <AttributeID>DEPARTURE AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="312e9fa7-433d-46a4-b061-e94bd02c9bbb">
+          <AttributeID>DEPARTURE CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="53da2e01-94e0-4b0e-863d-570c41d6fd85">
+          <AttributeID>DEP COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9780a3c8-86cf-44b0-a714-e13c8a1ab074">
+          <AttributeID>DEP TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5fac0588-3677-4610-8cc4-105feb9fab15">
+          <AttributeID>IATA REPORTING AIRLINE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e40e6aef-81dd-40d8-b635-34459ee5be3e">
+          <AttributeID>AIRLINE NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="720c97a1-bc57-4069-bf5a-2e0273b869b9">
+          <AttributeID>OFFICE COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a0085fd-772a-45d3-82ec-664c2daa2390">
+          <AttributeID>ACTIVE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="12be3b02-2195-468e-ae6c-267757e54842">
+          <AttributeID>DEP TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="59c3ef9e-3ce8-454d-aeea-086cab07b59e">
+          <AttributeID>DEP TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7dc83d20-dfe6-4030-9322-5bd48adb0298">
+          <AttributeID>DEP TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5b6a598a-3d60-488c-bbdf-c69825f1ec35">
+          <AttributeID>DEP TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a694081e-9d06-4a4f-a7b2-6202fdeb1083">
+          <AttributeID>W ON TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7f76431-32b2-478b-a2be-55fb0368334c">
+          <AttributeID>W ON TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0fded731-09ce-4ee7-b9d8-200e2f4a5032">
+          <AttributeID>W ON TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dccd5f25-54de-43f0-bf1e-b327d18d6b03">
+          <AttributeID>W ON TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="28cb3fd0-7db9-4c87-aad5-5c2b7a92a03e">
+          <AttributeID>ARR TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f1891e9c-0a76-40ef-b24e-1d18fe777dc0">
+          <AttributeID>ARR TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bda0ad13-624d-4f6e-9706-4c8f78832a7c">
+          <AttributeID>ARR TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="291255b4-76b5-4228-a482-deb353f0c85a">
+          <AttributeID>ARR TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="96a4b553-5cc1-45a6-8b04-5809f8895bcb">
+          <AttributeID>DEPARTURE DATE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ef274118-e815-47bd-a54b-85ffd7a9c7a0">
+          <AttributeID>DEPARTURE QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="06bfed4b-8404-4e6b-8b2d-d1b48e544665">
+          <AttributeID>DEPARTURE DAY OF WEEK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a49d10e-635e-4ba6-9e22-c578368b9f64">
+          <AttributeID>DEPARTURE NAME DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="83acba09-8518-41f3-990a-d455a46d04bc">
+          <AttributeID>DEPARTURE LEAP YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="18bc5566-811e-4398-9af0-acdacf98282f">
+          <AttributeID>DEPARTURE DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="18dd0a61-6e94-420d-a34d-421d350193cf">
+          <AttributeID>DEPARTURE MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e32b176-770f-45fe-a4cd-74aa726f0f18">
+          <AttributeID>DEPARTURE YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de13016a-db1f-4a9a-a4a9-bebcbea8930a">
+          <AttributeID>W OFF TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3fd209d-dd86-475b-b187-a922e81b9209">
+          <AttributeID>W OFF TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9de703e9-7627-4cdf-9471-3c35830a5d47">
+          <AttributeID>W OFF TIME MIUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58c45a2d-f985-4e54-b038-32515ba858bf">
+          <AttributeID>W OFF TIME SECOND</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="d456d831-385e-48b0-ae7e-7fb073822e4d">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="ec2ee486-2d6a-4442-9d71-486a0168aaf4">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="8822c731-1a88-4c9a-b001-74a501407f2d">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="9a1edd78-f96a-4a34-a572-f3f87bd2c377">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="4c896997-904e-431f-a0c3-5b0fa6f4f8bc">
+      <ID>ARR TIME</ID>
+      <Name>ARR TIME</Name>
+      <DimensionID>FACT FLIGHT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="242c2f4f-661b-497a-9967-52e92285284e">
+          <AttributeID>FLIGHT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8bc75e91-5d66-4bba-be80-2fd68c63a598">
+          <AttributeID>TAIL NUMBER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ba3bdd86-4fd4-4411-9a47-ece402d43535">
+          <AttributeID>DEP CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5cc4a9b-89ef-4714-af5e-4bfbee9a078a">
+          <AttributeID>ARR CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9df82418-7f97-426b-ab98-f48b96bcd388">
+          <AttributeID>DEPARTURE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ead82370-5047-40d6-bee8-94b17fe4a85e">
+          <AttributeID>ARRIVE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="02cc5d82-c406-4a4f-bb21-fbc6ff2d2d5a">
+          <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91e5f090-377f-4bbb-8d76-ec7da14e0241">
+          <AttributeID>CODESHARE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="849d500a-0ffc-4e0a-8911-63559083dd19">
+          <AttributeID>STOPS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b3b0ecab-f8b6-4e97-8519-f41ae370459c">
+          <AttributeID>IATA ARR AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c04d095e-f113-473c-8c3b-aa8a6ec97226">
+          <AttributeID>ARRIVAL AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da8ce9e7-3db3-4df9-bdf8-130f90e105c6">
+          <AttributeID>ARRIVAL CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8f6be3dc-9dd9-417d-9a25-f5af73920ade">
+          <AttributeID>ARRIVAL COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1b86247b-540d-4f2d-aeae-aa84b3bf7079">
+          <AttributeID>ARRIVAL TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a16765c-4638-472d-82fe-c2af34017e5e">
+          <AttributeID>DIM DEPARTURE AIRPORT - IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="705cfc02-f318-4d25-9517-c6ee00199bf1">
+          <AttributeID>DEPARTURE AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="83526b7f-4cce-4c62-8da5-8d7b6f47cbd5">
+          <AttributeID>DEPARTURE CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="980f53a9-e277-4869-8daf-ca8cbdbec928">
+          <AttributeID>DEP COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3570a43c-f5e2-40b4-ae39-0bac01c9f2e7">
+          <AttributeID>DEP TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="12ca7413-b80f-48ad-a861-dd2c9e945045">
+          <AttributeID>IATA REPORTING AIRLINE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2d1ed41-8d12-403a-bebe-a75db793dc08">
+          <AttributeID>AIRLINE NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a619d983-b35d-4c09-b9b5-92d4d3639d1e">
+          <AttributeID>OFFICE COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a2ad1a06-1941-4f7f-8270-78d1079c7808">
+          <AttributeID>ACTIVE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0f64df16-8dc5-47b8-9dd5-54a0f713a191">
+          <AttributeID>DEP TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8d2a9cbc-b254-46f8-be43-57b00bfacece">
+          <AttributeID>DEP TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="21086b78-c3de-4731-828c-b2e3e92ef7c2">
+          <AttributeID>DEP TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c785275e-ba55-4b7f-8b83-2bd1aaec178f">
+          <AttributeID>DEP TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7f12389-21ea-4904-9e14-d9a77d56ca28">
+          <AttributeID>W ON TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cb981897-4b6c-40ac-b683-039c7517ccae">
+          <AttributeID>W ON TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95b4bf39-6daa-45a6-b86a-b14d02e5898a">
+          <AttributeID>W ON TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8a536d76-ed12-4a86-909d-8b284d65fb96">
+          <AttributeID>W ON TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="059c7ee1-1ebc-4f83-b3ae-e6423c48f7b8">
+          <AttributeID>ARR TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24713334-dcd2-4e22-80d2-1320ceeee60a">
+          <AttributeID>ARR TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="57459694-ca8b-425c-9de4-1f56f8f573b7">
+          <AttributeID>ARR TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d6fa4850-2bce-4ba7-960b-8ec8e3e96fea">
+          <AttributeID>ARR TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b602775-5ea2-484d-82c6-109b1a779250">
+          <AttributeID>DEPARTURE DATE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66d016a6-433b-41dc-b1d0-c43f73f5c2fc">
+          <AttributeID>DEPARTURE QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="73312a2e-298e-416f-a95b-1e0f1e418500">
+          <AttributeID>DEPARTURE DAY OF WEEK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="53005885-0131-49bb-b917-87e475c5c5e2">
+          <AttributeID>DEPARTURE NAME DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="20c30fe8-f2b2-4185-aaf7-883ea557a26f">
+          <AttributeID>DEPARTURE LEAP YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="848b3cb1-10e7-49a8-84e7-e2ab1f68a37e">
+          <AttributeID>DEPARTURE DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0eaf9e9c-6e9d-44fc-8c7d-eaad96245970">
+          <AttributeID>DEPARTURE MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="06f78ad0-1232-4f5d-9117-39514826e127">
+          <AttributeID>DEPARTURE YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a6e8e5fa-b07f-4ca8-9606-cf2d7b0a2566">
+          <AttributeID>W OFF TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5765e8f-57ba-4182-9a62-389e7a49897e">
+          <AttributeID>W OFF TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f50d3576-d6c4-4c37-87a6-a20a1018ad9e">
+          <AttributeID>W OFF TIME MIUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="93585bff-8eab-4313-acf3-cb42eb5cfbcf">
+          <AttributeID>W OFF TIME SECOND</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="03f08132-784c-42ce-929d-1d007c884552">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="7cb6c629-66af-4944-89db-530ef0bd9f31">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="e5aa3101-e422-479d-8b4e-8acd6d2c6b15">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="dbb80e3d-db33-44b9-a937-af3f8c464b7b">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="239c60d2-d03b-4b43-be53-61c460a169ce">
+      <ID>DIM DEPARTURE CALENDAR</ID>
+      <Name>DIM DEPARTURE CALENDAR</Name>
+      <DimensionID>DIM DEPARTURE CALENDAR</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="d9cbbcd6-44bb-4e14-8d49-4321f3bea4e3">
+          <AttributeID>DEPARTURE DATE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="56215e86-6fcc-4619-90bb-c563171ef294">
+          <AttributeID>DEPARTURE QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dce34b04-cde7-4ef2-ac88-6ebc21ddb6cf">
+          <AttributeID>DEPARTURE DAY OF WEEK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="378bbcc5-0bd3-4f43-971f-9c0320e9bfd2">
+          <AttributeID>DEPARTURE NAME DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="39e3b845-5f74-42f7-9e58-9e895623ec0f">
+          <AttributeID>DEPARTURE LEAP YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5833a260-7f96-490d-851b-669355b81776">
+          <AttributeID>DEPARTURE DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="76ad51fc-4327-461c-80fe-b016ff1537f7">
+          <AttributeID>DEPARTURE MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="979002c2-520a-4f1c-b489-7ff0a1f237a0">
+          <AttributeID>DEPARTURE YEAR</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="84e4d082-1ec6-456c-80e4-1244959a6960">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="43cb4198-abe5-4eea-b7c7-b02edf48aa68">
+      <ID>W OFF TIME</ID>
+      <Name>W OFF TIME</Name>
+      <DimensionID>FACT FLIGHT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="2927fb91-8544-4c39-8ce9-2fcb8a203dec">
+          <AttributeID>FLIGHT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d41fcd01-d57e-43b6-90aa-a37fbfe30129">
+          <AttributeID>TAIL NUMBER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b34ef2f1-98cc-49f9-a4df-3b51bea46635">
+          <AttributeID>DEP CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b945f7a-7f49-43ce-85c2-d5a0127cdc97">
+          <AttributeID>ARR CITY NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="af423902-49dc-4192-ade9-0c19aa836a21">
+          <AttributeID>DEPARTURE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="838a8899-68e3-411f-ae7c-9765c1b0aee2">
+          <AttributeID>ARRIVE DELAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e064bd8f-ace7-4b08-b3d0-9f5b54550104">
+          <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f4c90da7-8d5e-4b70-b5c8-87eb6f50c978">
+          <AttributeID>CODESHARE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c22bff76-e9be-469f-ad39-22059d60d0a4">
+          <AttributeID>STOPS</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="28cca587-cc89-4069-998c-313a03a52af9">
+          <AttributeID>IATA ARR AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd4727ba-01a0-4b39-9fb3-9461674df669">
+          <AttributeID>ARRIVAL AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec5887e4-984a-4859-9b7c-7142978cc11a">
+          <AttributeID>ARRIVAL CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="315c70c2-7d85-406d-9916-5e81fe4d7eae">
+          <AttributeID>ARRIVAL COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07663400-51a7-4b9d-b6e4-702a6b77a9e7">
+          <AttributeID>ARRIVAL TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2ecefc89-9979-4994-9105-595688ba363a">
+          <AttributeID>DIM DEPARTURE AIRPORT - IATA DEP AIRPORT ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c869937b-6694-452d-b74a-f02c583f0f29">
+          <AttributeID>DEPARTURE AIRPORT NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f33ba61d-78bf-4533-b032-07f7ad3af1f6">
+          <AttributeID>DEPARTURE CITY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11ef2ee7-f338-4ebe-b7d1-6995ce90c24c">
+          <AttributeID>DEP COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ad901849-a228-4688-9ab6-fb6a46d9e8ae">
+          <AttributeID>DEP TIMEZONE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="590ebc7b-dc6c-41dd-8075-c2aae86ccddf">
+          <AttributeID>IATA REPORTING AIRLINE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3e4db90c-b880-488b-8261-558491f4b611">
+          <AttributeID>AIRLINE NAME</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="37760ed0-f120-434b-8ca2-ae21de1e29f1">
+          <AttributeID>OFFICE COUNTRY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68ca8a0d-568a-4486-ab58-a72c0303865f">
+          <AttributeID>ACTIVE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f868b099-0272-45eb-9e17-125398f8f725">
+          <AttributeID>DEP TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8ba26566-47b6-4dc7-8c5c-1ddd7ef43d8c">
+          <AttributeID>DEP TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a9537ffc-14ad-4a93-90a1-c60e40a5fd7d">
+          <AttributeID>DEP TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="445f1db0-0cce-4e62-8f8f-6ebf332bfc44">
+          <AttributeID>DEP TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8041d66c-718f-4bbf-8a0e-863ad9877d28">
+          <AttributeID>W ON TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="df16ed5a-9c37-4724-b8e1-c3b2e958df9c">
+          <AttributeID>W ON TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ccf6ca5-d4f8-4450-95e8-29b637005b41">
+          <AttributeID>W ON TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="07b32c7b-beb4-4fd8-b94e-ddba59461b1f">
+          <AttributeID>W ON TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ebec73ba-a602-4b49-8b9a-fe818ecb5175">
+          <AttributeID>ARR TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cf716ff8-67a9-491e-beab-0bf578875100">
+          <AttributeID>ARR TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="48c08014-4eec-40f2-88d2-fa60bbad335d">
+          <AttributeID>ARR TIME MINUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="93b821ea-4adf-42c0-b675-93413abd3777">
+          <AttributeID>ARR TIME SECOND</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b41d14cb-223c-4d68-b519-367158a92171">
+          <AttributeID>DEPARTURE DATE ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b53bfd6f-9f07-4d4d-8986-0f5a161e9e47">
+          <AttributeID>DEPARTURE QUARTER</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c4b01239-b3d4-4550-a2d9-365c0f825709">
+          <AttributeID>DEPARTURE DAY OF WEEK</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="873050b0-6e17-4777-8194-9419e75f40c4">
+          <AttributeID>DEPARTURE NAME DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="29efebc2-1d34-479b-8477-b20955504eab">
+          <AttributeID>DEPARTURE LEAP YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ffb5192f-4adf-4a16-a7c1-04a5b7e9421f">
+          <AttributeID>DEPARTURE DAY</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e654974b-bfd9-4f11-b84f-29bb9ae09fe4">
+          <AttributeID>DEPARTURE MONTH</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f194485a-1f7f-46a5-963a-bacf2c10e0f1">
+          <AttributeID>DEPARTURE YEAR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fa6dd734-3ca5-4f2a-b2f3-911100068c10">
+          <AttributeID>W OFF TIME ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cdb59c6a-62d2-4cf8-b25d-02266de0059f">
+          <AttributeID>W OFF TIME HOUR</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fbcd7f67-55e1-4b17-85e8-9f5b89a188b0">
+          <AttributeID>W OFF TIME MIUTE</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="113b8ea0-aaac-4c0e-b71e-301eee253236">
+          <AttributeID>W OFF TIME SECOND</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="7542d668-773b-4d9f-a31c-2c8884cde3c8">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="bb883e20-1cfb-4917-a36c-312625815d8e">
+          <HierarchyID>Hierarchy 1</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="680d1990-bb56-454f-b0a9-299fcbf5207c">
+          <HierarchyID>Hierarchy 2</HierarchyID>
+        </Hierarchy>
+        <Hierarchy dwd:design-time-name="5343c447-c949-4972-87a4-a590573c0b39">
+          <HierarchyID>Hierarchy 3</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="6471ba19-4cc4-4007-998f-b71a49f9253d">
+      <ID>DIM ROUTE</ID>
+      <Name>DIM ROUTE</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="c7b45c19-0f95-48c7-a67a-f47ba55e534d">
+          <ID>STOPS</ID>
+          <Name>STOPS</Name>
+          <Source dwd:design-time-name="6297b30a-5ee7-4046-957e-cc0f663d1c4d">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="43892401-6ff8-426b-89fd-ab21b530d7c6">
+              <TableID>warehouse_DIM_ROUTE</TableID>
+              <ColumnID>STOPS</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="56f3934b-c0c9-4509-901e-08a18e2c33d3">
+          <ID>DIM ROUTE Count</ID>
+          <Name>DIM ROUTE Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="7937a74a-1a40-4955-8bd8-3c552dd45888">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="bf666c7c-9af3-4ecd-bed0-f652f6797112">
+              <TableID>warehouse_DIM_ROUTE</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="cd895e61-4074-42d3-9090-1a97b0a7a6f8">
+          <CubeDimensionID>DIM ROUTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9117b3e5-36d2-4bc6-8a6b-9f997c33670c">
+              <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b4ec2dbe-fdcf-4b6d-8858-9a52945d8dd7">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="717343e5-829d-4ec9-a572-97d3d6070903">
+                    <TableID>warehouse_DIM_ROUTE</TableID>
+                    <ColumnID>IATA_DEP_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="7a05dc64-1a24-455a-8f77-c979263459a5">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c589f212-aa08-473f-9418-dc9cee3dc656">
+                    <TableID>warehouse_DIM_ROUTE</TableID>
+                    <ColumnID>IATA_ARR_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="c2b49681-d24a-490e-8730-7b09b06a69b1">
+          <CubeDimensionID>IATA ARR AIRPORT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bd63f9a3-598c-4790-bf78-73312e4ab278">
+              <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c7de0560-8a91-48eb-bdcc-1c7ac62828d4">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="caa6c48d-f73c-4fc7-8c2f-3921157a23a9">
+                    <TableID>warehouse_DIM_ROUTE</TableID>
+                    <ColumnID>IATA_DEP_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="5736edbd-7529-4844-8df9-a64028b51c6d">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="623327ac-f373-4d4a-acff-e84e14145119">
+                    <TableID>warehouse_DIM_ROUTE</TableID>
+                    <ColumnID>IATA_ARR_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="78435101-f0f8-4574-ab06-a46368893712">
+      <ID>FACT FLIGHT</ID>
+      <Name>FACT FLIGHT</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9b94b3dd-558e-4045-aead-0d0ff21c189f">
+          <ID>DEPARTURE DELAY</ID>
+          <Name>DEPARTURE DELAY</Name>
+          <Source dwd:design-time-name="e87a5a53-e7ce-4fd1-9764-83eb0c66e4e4">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="6f309785-871e-4f72-9841-5a76eebaaf31">
+              <TableID>warehouse_FACT_FLIGHT</TableID>
+              <ColumnID>DEPARTURE_DELAY</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="f279bba2-a5c2-4a06-9452-5f2a0ad70c54">
+          <ID>ARRIVE DELAY</ID>
+          <Name>ARRIVE DELAY</Name>
+          <Source dwd:design-time-name="427323c6-93b1-4e39-8953-de3da0420a5c">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a256af08-7407-4926-ab15-456e1f780495">
+              <TableID>warehouse_FACT_FLIGHT</TableID>
+              <ColumnID>ARRIVE_DELAY</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="36ce407f-2f3a-48e3-bed2-f5d894fe388c">
+          <ID>FACT FLIGHT Count</ID>
+          <Name>FACT FLIGHT Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="4039a4d4-4d2d-4a88-88ca-77ab5c067f07">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="7f575669-c52c-43c9-9622-1c9d20c11ab2">
+              <TableID>warehouse_FACT_FLIGHT</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="722bfe7b-ba74-4535-be42-cd996a93c810">
+          <CubeDimensionID>FACT FLIGHT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a0eb2daf-22c0-4703-9155-8ffeee05b911">
+              <AttributeID>FLIGHT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c9920e2a-e6a3-4ad0-9704-2a478f35c092">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="391d3f52-585c-4155-b61c-e44e0f3ffddf">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>FLIGHT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bb9e9b5e-405c-4ae4-b7ba-97c084dff7d3">
+          <CubeDimensionID>DIM ROUTE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a726c75c-76eb-473e-9c2b-59ec7aac20e0">
+              <AttributeID>IATA DEP AIRPORT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5269b34d-c6fc-4a97-a630-da1fdf09f5fe">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bd18b6d9-bbb0-46e1-ab01-4ba4f86a1717">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>IATA_DEP_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+                <KeyColumn dwd:design-time-name="d5c1d69d-81f3-4e28-b0d8-5235ee1d4e44">
+                  <DataType>WChar</DataType>
+                  <DataSize>4</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="834dc140-36ae-49df-b1e4-4a9a0c804a94">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>IATA_ARR_AIRPORT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5d776eae-af58-46a0-84c4-bada750bb2b7">
+          <CubeDimensionID>DIM AIRLINE</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6ee0c247-c6e0-4a53-87f6-8891f415fa39">
+              <AttributeID>IATA REPORTING AIRLINE</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="ba9eb9ff-a568-471c-bba3-a3f585d933c7">
+                  <DataType>WChar</DataType>
+                  <DataSize>3</DataSize>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="4acf6a13-efbd-4b0d-9033-b2cae565db8d">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>IATA_REPORTING_AIRLINE</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5ebc2e69-da6c-4836-85e6-f5b04ecfbd33">
+          <CubeDimensionID>DIM DEPARTURE CALENDAR</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1ee5ec92-ec60-42c9-8e51-fda1657a423d">
+              <AttributeID>DEPARTURE DATE ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="722f4b43-7d26-46e9-92cd-6f40a409e1bf">
+                  <DataType>Date</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="c6fccd89-44b8-4feb-a48a-1889371feb98">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>DEPARTURE_DATE_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="df993bc5-3171-4627-910b-e999c99685d0">
+          <CubeDimensionID>DEP TIME</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="557ef8c2-ecfa-4200-93a5-999cbeaa5c68">
+              <AttributeID>FLIGHT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="237786fa-8217-4d2c-bfd5-11ef8545795d">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="09cf1c3a-7b9c-41f1-ac01-b35200992e30">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>FLIGHT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="5085d17f-2de2-4a4d-a18f-fdacddfac94e">
+          <CubeDimensionID>W ON TIME</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2343bddf-bc22-4cbf-965d-6cd8d483405c">
+              <AttributeID>FLIGHT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="eaabebc5-f98c-46a0-af29-4cb46908385b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="5fad70c7-2299-42e0-9ecb-07e5da36a239">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>FLIGHT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="216a11a0-a58b-406e-9c83-541c8d8843db">
+          <CubeDimensionID>ARR TIME</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="17f6039f-d405-41fe-9201-583d57c5052e">
+              <AttributeID>FLIGHT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="25614587-9237-4d54-8e3e-be0d82b2b18c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="62f11339-8f57-4c84-8b9e-c2123875f096">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>FLIGHT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="f582092e-d8bc-4a41-bd41-ec41d922b009">
+          <CubeDimensionID>W OFF TIME</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cf57f19e-7d93-4f26-acdb-c787673ed565">
+              <AttributeID>FLIGHT ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="55f82903-7dcf-46db-ac80-036baaa66c41">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="0b9d8d21-4988-456f-964b-c284d92059aa">
+                    <TableID>warehouse_FACT_FLIGHT</TableID>
+                    <ColumnID>FLIGHT_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="9d2c3f84-544d-47ff-b814-4795116733db">
+    <DataSourceViewID>WATOSTATECZNAHURTOWNIA</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="a7f169de-c962-4bc7-80f8-bcfcf7757515">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>/*
+The CALCULATE command controls the aggregation of leaf cells in the cube.
+If the CALCULATE command is deleted or modified, the data within the cube is affected.
+You should edit this command only if you manually specify how the cube is aggregated.
+*/
+CALCULATE; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Licza_lotow_opoznionych]
+ AS IIF([Measures].[ARRIVE DELAY] &gt; 10, 0, 1 ), 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'FACT FLIGHT'  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Srednie_opoznienie]
+ AS ROUND([Laczny_czas_opoznien] / (2 * [Measures].[FACT FLIGHT Count]),2), 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'FACT FLIGHT'  ; 
+CREATE MEMBER CURRENTCUBE.[Measures].[Laczny_czas_opoznien]
+ AS [Measures].[ARRIVE DELAY] + [Measures].[DEPARTURE DELAY], 
+VISIBLE = 1 ,  ASSOCIATED_MEASURE_GROUP = 'FACT FLIGHT'  ; </Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+</Cube>

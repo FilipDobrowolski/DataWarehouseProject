@@ -6,10 +6,67 @@
     <Name>MultidimensionalAirportsProject.database</Name>
     <FullPath>MultidimensionalAirportsProject.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>WATOSTATECZNAHURTOWNIA.cube</Name>
+      <FullPath>WATOSTATECZNAHURTOWNIA.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>WATOSTATECZNAHURTOWNIA.partitions</Name>
+          <FullPath>WATOSTATECZNAHURTOWNIA.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>DIM AIRLINE.dim</Name>
+      <FullPath>DIM AIRLINE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM ROUTE.dim</Name>
+      <FullPath>DIM ROUTE.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DIM DEPARTURE CALENDAR.dim</Name>
+      <FullPath>DIM DEPARTURE CALENDAR.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>FACT FLIGHT.dim</Name>
+      <FullPath>FACT FLIGHT.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>WATOSTATECZNAHURTOWNIA.ds</Name>
+      <FullPath>WATOSTATECZNAHURTOWNIA.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>WATOSTATECZNAHURTOWNIA.dsv</Name>
+      <FullPath>WATOSTATECZNAHURTOWNIA.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>WATOSTATECZNAHURTOWNIA</Id>
+            <Name>WATOSTATECZNAHURTOWNIA</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=DESKTOP-RD03SIO\FILIP;Integrated Security=SSPI;Initial Catalog=WATOSTATECZNAHURTOWNIA</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>WATOSTATECZNAHURTOWNIA</Id>
+            <Name>WATOSTATECZNAHURTOWNIA</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
