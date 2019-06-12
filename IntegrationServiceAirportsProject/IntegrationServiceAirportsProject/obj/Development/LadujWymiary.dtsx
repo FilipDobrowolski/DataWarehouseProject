@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LadujWymiary"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{147BA31D-01E4-485B-84DF-D349400C6375}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{0A14E87F-F1DB-4B6A-BD5D-772DE81CA721}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -944,7 +944,6 @@
       DTS:refId="Package\laduj dane o lotnisku"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{BE97FA3D-2F41-4AE5-B331-3D2A8517900A}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -1726,7 +1725,6 @@
       DTS:refId="Package\laduj dane o trasie"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:Disabled="True"
       DTS:DTSID="{DA43FCBB-BD53-4C52-88D2-62830388E2E5}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
