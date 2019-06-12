@@ -111,3 +111,23 @@ CREATE TABLE errors.ERROR_WAREHOUSE_ARRIVAL_TIME(
    TIME_SECOND               varchar(100)           null
 )
 go
+
+CREATE TABLE errors.ERROR_WHEELS_ON_TIME(
+    [ErrorCode] int,
+    [ErrorColumn] int,
+   TIME_ID varchar(100)           null,
+   TIME_HOUR         varchar(100)         null,
+   TIME_MINUTE       varchar(100)         null,
+   TIME_SECOND               varchar(100)           null
+)
+go
+
+CREATE TABLE errors.ERROR_WHEELS_OFF_TIME(
+    [ErrorCode] int,
+    [ErrorColumn] int,
+   TIME_ID varchar(100)           null,
+   TIME_HOUR         varchar(100)         null,
+   TIME_MINUTE       varchar(100)         null,
+   TIME_SECOND               varchar(100)           null
+)
+go
