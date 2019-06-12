@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IntegrationServiceAirportsProject</Name>
-    <LastWriteTime>2019-06-11T20:43:58.4445222Z</LastWriteTime>
+    <LastWriteTime>2019-06-12T09:23:33.6582374Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -18,7 +18,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LadujWymiary.dtsx</Name>
-      <LastWriteTime>2019-06-11T20:46:26.68537Z</LastWriteTime>
+      <LastWriteTime>2019-06-12T09:22:28.820811Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
