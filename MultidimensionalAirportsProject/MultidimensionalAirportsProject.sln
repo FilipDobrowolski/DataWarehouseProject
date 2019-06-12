@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "MultidimensionalAirportsProject", "MultidimensionalAirportsProject\MultidimensionalAirportsProject.dwproj", "{79982F72-DF45-4C78-9DFE-F5B78F790C1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79982F72-DF45-4C78-9DFE-F5B78F790C1E}.Development|Default.ActiveCfg = Development
+		{79982F72-DF45-4C78-9DFE-F5B78F790C1E}.Development|Default.Build.0 = Development
+		{79982F72-DF45-4C78-9DFE-F5B78F790C1E}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {109414C5-FCA1-4667-8332-C886DB607C95}
+	EndGlobalSection
+EndGlobal

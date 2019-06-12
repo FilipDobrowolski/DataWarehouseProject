@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LadujDatyiCzas"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{0E2113C1-7443-4256-AC86-A422DD924556}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{DD6E95C7-C93D-4876-B257-3BD5569702BA}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3650,10 +3650,10 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
         <NodeLayout
           Size="187.2,41.6"
           Id="Package\Laduj czas do hurtowni"
-          TopLeft="406.285721204719,108.282354459796" />
+          TopLeft="406.285721204719,108.894119174258" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="336.000002520425,128.776472102565">
+          TopLeft="336.000002520425,129.082354459796">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
