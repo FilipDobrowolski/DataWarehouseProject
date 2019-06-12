@@ -8,7 +8,7 @@
     <TransactionalDeployment>false</TransactionalDeployment>
     <PartitionDeployment>DeployPartitions</PartitionDeployment>
     <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
-    <ProcessingOption>DoNotProcess</ProcessingOption>
+    <ProcessingOption>Default</ProcessingOption>
     <OutputScript></OutputScript>
     <ImpactAnalysisFile></ImpactAnalysisFile>
     <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
@@ -61,7 +61,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>SsPO+Eh7TGe/v39itLxgjZzAGSM=12.06.2019 18:39:3712.06.2019 17:31:29GDfBJwMjMdo2YaE2u6WZJPQ6yAM=12.06.2019 17:31:3012.06.2019 17:31:29</TimeStamp>
+        <TimeStamp>IryFHNY1OWTkJYvR9aLTbvW9mEM=12.06.2019 19:36:2812.06.2019 17:31:29GDfBJwMjMdo2YaE2u6WZJPQ6yAM=12.06.2019 17:31:3012.06.2019 17:31:29</TimeStamp>
         <ID>
           <String>WATOSTATECZNAHURTOWNIA</String>
         </ID>
@@ -78,5 +78,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-06-12T16:40:58.59Z</LastDeployed>
+  <LastDeployed>2019-06-12T17:43:57.563333Z</LastDeployed>
 </DeploymentSnapshot>
