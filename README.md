@@ -3,5 +3,6 @@ Project of data warehouse.
 # Created by Filip Dobrowolski & Krzysztof Jaremko
 Repository creation date: 17/03/2019
 # Database models
-![t1](https://user-images.githubusercontent.com/25904076/56501588-a2b20000-650f-11e9-8f5b-d2bd8311fcbf.JPG)
-![t2](https://user-images.githubusercontent.com/25904076/56501595-a47bc380-650f-11e9-9340-7dcc086b8d4a.JPG)
+![z2](https://user-images.githubusercontent.com/25904076/59385191-1e883600-8d64-11e9-8a23-606f3adb2943.png)
+![z1](https://user-images.githubusercontent.com/25904076/59385189-1d570900-8d64-11e9-82d5-c0cda2b67891.png)
+
