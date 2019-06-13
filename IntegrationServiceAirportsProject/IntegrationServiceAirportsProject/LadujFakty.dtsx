@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LadujFakty"
   DTS:PackageType="5"
-  DTS:VersionBuild="14"
-  DTS:VersionGUID="{16CA7CF7-415B-4C61-8BCA-D6F66885EB55}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{A0BC3911-6E43-44B5-8F94-0E0F40FD6FF4}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -170,16 +170,6 @@
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[SEBASTIAN-LENOV.hd]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{71DD2353-FF64-43D3-B731-443A14A6787B}"
-      DTS:ObjectName="SEBASTIAN-LENOV.hd">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-RD03SIO\FILIP;Initial Catalog=WATHURTOWNIE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -5426,7 +5416,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="FLIGHT_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTURE_DATE_ID" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IATA_REPORTING_AIRLINE" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IATA_DEP_AIRPORT_ID" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IATA_ARR_AIRPORT_ID" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TAIL_NUMBER" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DEP_CITY_NAME" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ARR_CITY_NAME" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DEPARTURE_TIME" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTURE_DELAY" dataType="DT_NUMERIC" length="0" precision="10" scale="3" codePage="0"/&gt;&lt;referenceColumn name="WHEELS_OFF" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WHEELS_ON" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ARRIVE_TIME" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ARRIVE_DELAY" dataType="DT_NUMERIC" length="0" precision="10" scale="3" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="FLIGHT_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTURE_DATE_ID" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IATA_REPORTING_AIRLINE" dataType="DT_STR" length="3" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IATA_DEP_AIRPORT_ID" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="IATA_ARR_AIRPORT_ID" dataType="DT_STR" length="4" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="TAIL_NUMBER" dataType="DT_STR" length="7" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DEP_CITY_NAME" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="ARR_CITY_NAME" dataType="DT_STR" length="100" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="DEP_TIME_ID" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DEPARTURE_DELAY" dataType="DT_NUMERIC" length="0" precision="10" scale="3" codePage="0"/&gt;&lt;referenceColumn name="W_OFF_TIME_ID" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="W_ON_TIME_ID" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ARR_TIME_ID" dataType="DT_DBTIME2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="ARRIVE_DELAY" dataType="DT_NUMERIC" length="0" precision="10" scale="3" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -5444,8 +5434,8 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
               <connections>
                 <connection
                   refId="Package\Przeslij dane o lotach do warehouse\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[SEBASTIAN-LENOV.hd]"
-                  connectionManagerRefId="Package.ConnectionManagers[SEBASTIAN-LENOV.hd]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-RD03SIO\FILIP.WATOSTATECZNAHURTOWNIA]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-RD03SIO\FILIP.WATOSTATECZNAHURTOWNIA]"
                   description="Connection manager used to access lookup data."
                   name="OleDbConnection" />
               </connections>
@@ -6657,25 +6647,25 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Wyczysc tabele"
-          TopLeft="261.714290171253,28.7529415797197" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Laduj dane o lotach"
           TopLeft="252.571432872694,111.952942746568" />
-        <NodeLayout
-          Size="275.2,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded"
-          TopLeft="214.285717934978,196.376473342341" />
         <NodeLayout
           Size="245.6,41.6"
           Id="Package\Przeslij dane o lotach do tabeli final"
           TopLeft="219.428575165418,280.188239223652" />
         <NodeLayout
+          Size="275.2,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded"
+          TopLeft="214.285717934978,196.376473342341" />
+        <NodeLayout
           Size="248,41.6"
           Id="Package\Przeslij dane o lotach do warehouse"
           TopLeft="214.285717934978,370.729416964046" />
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Wyczysc tabele"
+          TopLeft="261.714290171253,28.7529415797197" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="337.542861521974,70.3529415797197">
@@ -6795,15 +6785,15 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
     design-time-name="Package\Laduj dane o lotach">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Laduj dane o lotach\OLE DB Destination"
-          TopLeft="536,172.8" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="150.4,41.6"
           Id="Package\Laduj dane o lotach\Flat File Source"
           TopLeft="222.4,161.6" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Laduj dane o lotach\OLE DB Destination"
+          TopLeft="536,172.8" />
         <EdgeLayout
           Id="Package\Laduj dane o lotach.Paths[Flat File Source Output]"
           TopLeft="372.8,182.4">
@@ -6835,318 +6825,27 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="50.9379557291667,-15.568359375,61.3240885416667,9.568359375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <TaskHost
-    design-time-name="Package\Przeslij dane o lotach do tabeli procedded">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="196.8,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_RAW_FLIGHT"
-          TopLeft="61.6,62.776467945666" />
-        <NodeLayout
-          Size="250.4,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\stage_error_ERROR_CLEAN_FLIGHT"
-          TopLeft="386.416332675277,415.818489367079" />
-        <NodeLayout
-          Size="169.6,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\Setting proper time"
-          TopLeft="74.171427014409,232.894114361007" />
-        <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\Convert time"
-          TopLeft="307.771427014409,230.494114361007" />
-        <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_CLEAN_FLIGHT"
-          TopLeft="597.94286547291,134.917647144621" />
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\Filter Null values"
-          TopLeft="324.4571429058,60" />
-        <NodeLayout
-          Size="120,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\Union All"
-          TopLeft="526.82449833172,341.667227085639" />
-        <NodeLayout
-          Size="159.2,41.6"
-          Id="Package\Przeslij dane o lotach do tabeli procedded\Bad Null cleaning"
-          TopLeft="75.77142851304,151.999998687295" />
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Output]"
-          TopLeft="157.171427763725,193.599998687295">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,39.294115673712"
-              Start="0,0"
-              End="0,31.794115673712">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.794115673712" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Error Output]"
-          TopLeft="376.971427014409,272.094114361007">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="209.853071317311,69.5731127246323"
-              Start="0,0"
-              End="209.853071317311,62.0731127246323">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.8033628888962" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.8033628888962"
-                    Point2="0,20.8033628888962"
-                    Point3="4,20.8033628888962" />
-                  <mssgle:LineSegment
-                    End="205.853071317311,20.8033628888962" />
-                  <mssgle:CubicBezierSegment
-                    Point1="205.853071317311,20.8033628888962"
-                    Point2="209.853071317311,20.8033628888962"
-                    Point3="209.853071317311,24.8033628888962" />
-                  <mssgle:LineSegment
-                    End="209.853071317311,62.0731127246323" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="39.9651489399057,25.8033628888962,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Error Output1]"
-          TopLeft="158.971427014409,274.494114361007">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="399.853071317311,67.1731127246323"
-              Start="0,0"
-              End="399.853071317311,59.6731127246323">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,48.5480476978215" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,48.5480476978215"
-                    Point2="0,52.5480476978215"
-                    Point3="4,52.5480476978215" />
-                  <mssgle:LineSegment
-                    End="395.853071317311,52.5480476978215" />
-                  <mssgle:CubicBezierSegment
-                    Point1="395.853071317311,52.5480476978215"
-                    Point2="399.853071317311,52.5480476978215"
-                    Point3="399.853071317311,56.5480476978215" />
-                  <mssgle:LineSegment
-                    End="399.853071317311,59.6731127246323" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="134.965148939906,57.5480476978215,129.9227734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Union All Output 1]"
-          TopLeft="586.82449833172,383.267227085639">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-75.2081656564429,32.5512622814398"
-              Start="0,0"
-              End="-75.2081656564429,25.0512622814398">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.2756311407199" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.2756311407199"
-                    Point2="0,16.2756311407199"
-                    Point3="-4,16.2756311407199" />
-                  <mssgle:LineSegment
-                    End="-71.2081656564429,16.2756311407199" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-71.2081656564429,16.2756311407199"
-                    Point2="-75.2081656564429,16.2756311407199"
-                    Point3="-75.2081656564429,20.2756311407199" />
-                  <mssgle:LineSegment
-                    End="-75.2081656564429,25.0512622814398" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[OLE DB Source Output]"
-          TopLeft="157.68571425652,104.376467945666">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.6235307416289"
-              Start="0,0"
-              End="0,40.1235307416289">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.1235307416289" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[OLE DB Destination Error Output]"
-          TopLeft="700.74286547291,176.517647144621">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-85.9183671411899,165.149579941018"
-              Start="0,0"
-              End="-85.9183671411899,157.649579941018">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,103.70624778762" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,103.70624778762"
-                    Point2="0,107.70624778762"
-                    Point3="-4,107.70624778762" />
-                  <mssgle:LineSegment
-                    End="-81.9183671411899,107.70624778762" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81.9183671411899,107.70624778762"
-                    Point2="-85.9183671411899,107.70624778762"
-                    Point3="-85.9183671411899,111.70624778762" />
-                  <mssgle:LineSegment
-                    End="-85.9183671411899,157.649579941018" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-116.168089820595,112.70624778762,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Not NULL Keys]"
-          TopLeft="427.123809572467,101.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="273.619055900443,33.3176471446209"
-              Start="0,0"
-              End="273.619055900443,25.8176471446209">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,9.53000899273945" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,9.53000899273945"
-                    Point2="0,13.5300089927395"
-                    Point3="4,13.5300089927395" />
-                  <mssgle:LineSegment
-                    End="269.619055900443,13.5300089927395" />
-                  <mssgle:CubicBezierSegment
-                    Point1="269.619055900443,13.5300089927395"
-                    Point2="273.619055900443,13.5300089927395"
-                    Point3="273.619055900443,17.5300089927395" />
-                  <mssgle:LineSegment
-                    End="273.619055900443,25.8176471446209" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="103.536949825222,18.5300089927395,66.54515625,11.2822265625"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Output1]"
-          TopLeft="377.380951626771,230.494114361007">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,-128.894114361007"
-              Start="0,0"
-              End="0,-121.394114361007">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,-121.394114361007" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Output2]"
-          TopLeft="243.771427014409,252.494114361007">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="64,0"
-              Start="0,0"
-              End="56.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="56.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Laduj dane o lotach\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Przeslij dane o lotach do tabeli final">
     <LayoutInfo>
@@ -7191,7 +6890,9 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-30.5668294270833,25.84873046875,61.1336588541667,9.6025390625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7249,7 +6950,9 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="28.4831705729167,5,61.1336588541667,9.6025390625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -7325,6 +7028,398 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Przeslij dane o lotach do tabeli final\stage_fact_CLEAN_FLIGHT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Przeslij dane o lotach do tabeli final\stage_fact_FINAL_FLIGHT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Przeslij dane o lotach do tabeli final\stage_error_ERROR_FINAL_FLIGHT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Przeslij dane o lotach do tabeli procedded">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_RAW_FLIGHT"
+          TopLeft="61.6,62.776467945666" />
+        <NodeLayout
+          Size="250.4,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\stage_error_ERROR_CLEAN_FLIGHT"
+          TopLeft="386.416332675277,415.818489367079" />
+        <NodeLayout
+          Size="169.6,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\Setting proper time"
+          TopLeft="74.171427014409,232.894114361007" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\Convert time"
+          TopLeft="307.771427014409,230.494114361007" />
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_CLEAN_FLIGHT"
+          TopLeft="597.94286547291,134.917647144621" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\Filter Null values"
+          TopLeft="324.4571429058,60" />
+        <NodeLayout
+          Size="120,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\Union All"
+          TopLeft="526.82449833172,341.667227085639" />
+        <NodeLayout
+          Size="159.2,41.6"
+          Id="Package\Przeslij dane o lotach do tabeli procedded\Bad Null cleaning"
+          TopLeft="75.77142851304,151.999998687295" />
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Output]"
+          TopLeft="157.171427763725,193.599998687295">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.294115673712"
+              Start="0,0"
+              End="0,31.794115673712">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.794115673712" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.6620442708333,11.112878149356,61.3240885416667,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Error Output1]"
+          TopLeft="158.971427014409,274.494114361007">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="399.853071317311,67.1731127246323"
+              Start="0,0"
+              End="399.853071317311,59.6731127246323">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5480476978215" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.5480476978215"
+                    Point2="0,52.5480476978215"
+                    Point3="4,52.5480476978215" />
+                  <mssgle:LineSegment
+                    End="395.853071317311,52.5480476978215" />
+                  <mssgle:CubicBezierSegment
+                    Point1="395.853071317311,52.5480476978215"
+                    Point2="399.853071317311,52.5480476978215"
+                    Point3="399.853071317311,56.5480476978215" />
+                  <mssgle:LineSegment
+                    End="399.853071317311,59.6731127246323" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="134.965148939906,57.5480476978215,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Error Output]"
+          TopLeft="376.971427014409,272.094114361007">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="209.853071317311,69.5731127246323"
+              Start="0,0"
+              End="209.853071317311,62.0731127246323">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8033628888962" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8033628888962"
+                    Point2="0,20.8033628888962"
+                    Point3="4,20.8033628888962" />
+                  <mssgle:LineSegment
+                    End="205.853071317311,20.8033628888962" />
+                  <mssgle:CubicBezierSegment
+                    Point1="205.853071317311,20.8033628888962"
+                    Point2="209.853071317311,20.8033628888962"
+                    Point3="209.853071317311,24.8033628888962" />
+                  <mssgle:LineSegment
+                    End="209.853071317311,62.0731127246323" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="39.9651489399057,25.8033628888962,129.9227734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Union All Output 1]"
+          TopLeft="586.82449833172,383.267227085639">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-75.2081656564429,32.5512622814398"
+              Start="0,0"
+              End="-75.2081656564429,25.0512622814398">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.2756311407199" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.2756311407199"
+                    Point2="0,16.2756311407199"
+                    Point3="-4,16.2756311407199" />
+                  <mssgle:LineSegment
+                    End="-71.2081656564429,16.2756311407199" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-71.2081656564429,16.2756311407199"
+                    Point2="-75.2081656564429,16.2756311407199"
+                    Point3="-75.2081656564429,20.2756311407199" />
+                  <mssgle:LineSegment
+                    End="-75.2081656564429,25.0512622814398" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[OLE DB Source Output]"
+          TopLeft="157.68571425652,104.376467945666">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.6235307416289"
+              Start="0,0"
+              End="0,40.1235307416289">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.1235307416289" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.6620442708333,15.2775856833144,61.3240885416667,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[OLE DB Destination Error Output]"
+          TopLeft="700.74286547291,176.517647144621">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-85.9183671411899,165.149579941018"
+              Start="0,0"
+              End="-85.9183671411899,157.649579941018">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.70624778762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,103.70624778762"
+                    Point2="0,107.70624778762"
+                    Point3="-4,107.70624778762" />
+                  <mssgle:LineSegment
+                    End="-81.9183671411899,107.70624778762" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-81.9183671411899,107.70624778762"
+                    Point2="-85.9183671411899,107.70624778762"
+                    Point3="-85.9183671411899,111.70624778762" />
+                  <mssgle:LineSegment
+                    End="-85.9183671411899,157.649579941018" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-116.168089820595,112.70624778762,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Not NULL Keys]"
+          TopLeft="427.123809572467,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="273.619055900443,33.3176471446209"
+              Start="0,0"
+              End="273.619055900443,25.8176471446209">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.53000899273945" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.53000899273945"
+                    Point2="0,13.5300089927395"
+                    Point3="4,13.5300089927395" />
+                  <mssgle:LineSegment
+                    End="269.619055900443,13.5300089927395" />
+                  <mssgle:CubicBezierSegment
+                    Point1="269.619055900443,13.5300089927395"
+                    Point2="273.619055900443,13.5300089927395"
+                    Point3="273.619055900443,17.5300089927395" />
+                  <mssgle:LineSegment
+                    End="273.619055900443,25.8176471446209" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="68.3527896689715,18.5300089927395,136.9134765625,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Output2]"
+          TopLeft="243.771427014409,252.494114361007">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="64,0"
+              Start="0,0"
+              End="56.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="56.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-2.41204427083333,5,61.3240885416667,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Przeslij dane o lotach do tabeli procedded.Paths[Derived Column Output1]"
+          TopLeft="377.380951626771,230.494114361007">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-128.894114361007"
+              Start="0,0"
+              End="0,-121.394114361007">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-121.394114361007" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.6620442708333,-65.4812368680035,61.3240885416667,9.568359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_RAW_FLIGHT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Przeslij dane o lotach do tabeli procedded\stage_error_ERROR_CLEAN_FLIGHT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_CLEAN_FLIGHT">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Przeslij dane o lotach do warehouse">
     <LayoutInfo>
@@ -7378,7 +7473,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="91.3536820758236,29.258344698887,146.4178125,11.43359375"
+              BoundingBox="56.2616638466568,29.258344698887,216.601848958333,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7414,7 +7509,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="8.6847663587082,-35.9023086313616,111.6127734375,11.609375"
+              BoundingBox="-23.6689185371253,-35.9023086313616,176.320143229167,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -7437,103 +7532,14 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-30.5668294270833,29.4504119600803,61.1336588541667,9.6025390625"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Laduj dane o lotach\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_RAW_FLIGHT">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Przeslij dane o lotach do tabeli procedded\stage_error_ERROR_CLEAN_FLIGHT">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Przeslij dane o lotach do tabeli procedded\stage_fact_CLEAN_FLIGHT">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Przeslij dane o lotach do tabeli final\stage_error_ERROR_FINAL_FLIGHT">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Przeslij dane o lotach do tabeli final\stage_fact_FINAL_FLIGHT">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Przeslij dane o lotach do tabeli final\stage_fact_CLEAN_FLIGHT">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Przeslij dane o lotach do warehouse\stage_fact_FINAL_FLIGHT">
     <Properties>
@@ -7557,6 +7563,24 @@ where [refTable].[DEPARTURE_DATE_ID] = ? and [refTable].[IATA_REPORTING_AIRLINE]
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Przeslij dane o lotach do warehouse\Lookup">
+    <Properties>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q2:string">[warehouse].[FACT_FLIGHT]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q3:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

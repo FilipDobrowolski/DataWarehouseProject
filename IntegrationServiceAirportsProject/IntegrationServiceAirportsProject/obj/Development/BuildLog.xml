@@ -2,23 +2,23 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>IntegrationServiceAirportsProject</Name>
-    <LastWriteTime>2019-06-12T12:22:35.3824674Z</LastWriteTime>
+    <LastWriteTime>2019-06-13T12:24:14.9907054Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>LadujWymiary.dtsx</Name>
-      <LastWriteTime>2019-06-12T09:27:44.0473318Z</LastWriteTime>
+      <LastWriteTime>2019-06-13T10:40:52.1319335Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LadujFakty.dtsx</Name>
-      <LastWriteTime>2019-06-12T10:48:50.394955Z</LastWriteTime>
+      <LastWriteTime>2019-06-13T12:18:30.4340701Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>LadujDatyiCzas.dtsx</Name>
-      <LastWriteTime>2019-06-12T12:09:36.040305Z</LastWriteTime>
+      <LastWriteTime>2019-06-13T12:24:13.7457687Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

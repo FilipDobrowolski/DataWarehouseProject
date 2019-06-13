@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LadujDatyiCzas"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{DD6E95C7-C93D-4876-B257-3BD5569702BA}">
+  DTS:VersionBuild="15"
+  DTS:VersionGUID="{E1EAC5EC-24DC-47D3-ABDF-419DAF958351}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -43,17 +43,164 @@
       DTS:ObjectName="Excel Connection Manager 2">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Warehouse\DataWarehouseProject\Dane\CALENDAR2003.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Warehouse\DataWarehouseProject\Dane\calendar.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[SEBASTIAN-LENOV.hd]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{244F876E-1C0E-47C6-A885-7A45E3A98085}"
-      DTS:ObjectName="SEBASTIAN-LENOV.hd">
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager CSV CALENDAR]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{58E63828-7207-403F-8F63-1252268CEBBD}"
+      DTS:ObjectName="Flat File Connection Manager CSV CALENDAR">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=DESKTOP-RD03SIO\FILIP;Initial Catalog=WATHURTOWNIE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Warehouse\DataWarehouseProject\Dane\calendarCSV.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DATE_ID"
+              DTS:DTSID="{5685F2F3-99C7-407F-A395-432C26F8BFDB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="QUARTER"
+              DTS:DTSID="{9C18F6C2-7507-4404-AA09-06493A7DDA49}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DAY_OF_WEEK"
+              DTS:DTSID="{B4A4E68F-E98F-472F-BADD-C346B46672D5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="NAME_DAY"
+              DTS:DTSID="{D2D30C12-C843-419D-A9AF-0A1316C22E62}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LEAP_YEAR"
+              DTS:DTSID="{5786030F-AA39-43F0-A6E2-F43A7C3E7761}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="DAY"
+              DTS:DTSID="{03FDD6E9-F0EA-4066-9A51-6DA244088F0C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MONTH"
+              DTS:DTSID="{EF8514A3-FFA3-404A-893D-9648A066079E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YEAR"
+              DTS:DTSID="{67050FF7-2365-4F72-9425-A21AD25F2D66}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager CSV TIME]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{904997B0-3329-47AF-8045-BEE08FD81745}"
+      DTS:ObjectName="Flat File Connection Manager CSV TIME">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Warehouse\DataWarehouseProject\Dane\timeCSV.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TIME_ID"
+              DTS:DTSID="{D8939866-0209-4519-9F29-B6224ADC358D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HOUR"
+              DTS:DTSID="{31A5B63F-A318-48BA-B84E-8DDD00A16238}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MINUTE"
+              DTS:DTSID="{8EED8FB2-1B46-4BA0-B454-14EB02BBBF70}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SECOND"
+              DTS:DTSID="{96B8BFF0-6E45-49B2-8143-D01325500DDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="00 00 01"
+              DTS:DTSID="{F0CB763F-1A10-4012-B9A2-A2C53DAD96BD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -87,24 +234,32 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Data Conversion.Inputs[Data Conversion Input].Columns[TIME_ID]"
-                      cachedDataType="date"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="TIME_ID"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[TIME_ID]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[TIME_ID]" />
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Data Conversion.Inputs[Data Conversion Input].Columns[HOUR]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="HOUR"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[HOUR]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[HOUR]" />
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Data Conversion.Inputs[Data Conversion Input].Columns[MINUTE]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="MINUTE"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MINUTE]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MINUTE]" />
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Data Conversion.Inputs[Data Conversion Input].Columns[SECOND]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="SECOND"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[SECOND]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[SECOND]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -129,7 +284,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[TIME_ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[TIME_ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -149,7 +304,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[HOUR]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[HOUR]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -169,7 +324,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MINUTE]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MINUTE]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -189,7 +344,7 @@
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[SECOND]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[SECOND]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -224,171 +379,203 @@
               </outputs>
             </component>
             <component
-              refId="Package\Laduj czas do hurtowni\Excel Source 1"
-              componentClassID="Microsoft.ExcelSource"
-              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Excel Source"
-              name="Excel Source 1"
+              refId="Package\Laduj czas do hurtowni\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
               usesDispositions="true"
               version="1">
               <properties>
                 <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">Arkusz1$</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mapping from parameters in the SQL command to variables."
-                  name="ParameterMapping"></property>
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Laduj czas do hurtowni\Excel Source 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
+                  refId="Package\Laduj czas do hurtowni\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager CSV TIME]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager CSV TIME]"
+                  name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output]"
-                  name="Excel Source Output">
+                  refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[TIME_ID]"
-                      dataType="date"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[TIME_ID]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[TIME_ID]"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[TIME_ID]"
+                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TIME_ID]"
+                      length="100"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[TIME_ID]"
                       name="TIME_ID"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[HOUR]"
-                      dataType="r8"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[HOUR]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[HOUR]"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[HOUR]"
+                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOUR]"
+                      length="100"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[HOUR]"
                       name="HOUR"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MINUTE]"
-                      dataType="r8"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MINUTE]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[MINUTE]"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MINUTE]"
+                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MINUTE]"
+                      length="100"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MINUTE]"
                       name="MINUTE"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[SECOND]"
-                      dataType="r8"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[SECOND]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[SECOND]"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[SECOND]"
+                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SECOND]"
+                      length="100"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[SECOND]"
                       name="SECOND"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[F5]"
-                      dataType="wstr"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[00 00 01]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F5]"
-                      length="255"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[F5]"
-                      name="F5"
-                      truncationRowDisposition="FailComponent" />
+                      externalMetadataColumnId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[00 00 01]"
+                      length="100"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[00 00 01]"
+                      name="00 00 01"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[TIME_ID]"
-                      dataType="date"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[TIME_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="TIME_ID" />
                     <externalMetadataColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[HOUR]"
-                      dataType="r8"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[HOUR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="HOUR" />
                     <externalMetadataColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[MINUTE]"
-                      dataType="r8"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MINUTE]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="MINUTE" />
                     <externalMetadataColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[SECOND]"
-                      dataType="r8"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SECOND]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="SECOND" />
                     <externalMetadataColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[F5]"
-                      dataType="wstr"
-                      length="255"
-                      name="F5" />
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[00 00 01]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
+                      name="00 00 01" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output]"
+                  refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
-                  name="Excel Source Error Output">
+                  name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[TIME_ID]"
-                      dataType="date"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[TIME_ID]"
-                      name="TIME_ID" />
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[HOUR]"
-                      dataType="r8"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[HOUR]"
-                      name="HOUR" />
-                    <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[MINUTE]"
-                      dataType="r8"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[MINUTE]"
-                      name="MINUTE" />
-                    <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[SECOND]"
-                      dataType="r8"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[SECOND]"
-                      name="SECOND" />
-                    <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[F5]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[F5]"
-                      name="F5" />
-                    <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1075,24 +1262,32 @@ where [refTable].[ARR_TIME_ID] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[TIME_ID]"
-                      cachedDataType="date"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="TIME_ID"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[TIME_ID]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[TIME_ID]" />
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[HOUR]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="HOUR"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[HOUR]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[HOUR]" />
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[MINUTE]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="MINUTE"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MINUTE]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MINUTE]" />
                     <inputColumn
                       refId="Package\Laduj czas do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[SECOND]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="SECOND"
-                      lineageId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[SECOND]" />
+                      lineageId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[SECOND]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1112,7 +1307,7 @@ where [refTable].[ARR_TIME_ID] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[TIME_ID]}) || [ISNULL](#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[HOUR]}) || [ISNULL](#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MINUTE]}) || [ISNULL](#{Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[SECOND]})</property>
+                      name="Expression">[ISNULL](#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[TIME_ID]}) || [ISNULL](#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[HOUR]}) || [ISNULL](#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MINUTE]}) || [ISNULL](#{Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[SECOND]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -2428,10 +2623,10 @@ where [refTable].[ARR_TIME_ID] = ?</property>
               name="Data Conversion Output"
               startId="Package\Laduj czas do hurtowni\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Laduj czas do hurtowni.Paths[Excel Source Output]"
+              refId="Package\Laduj czas do hurtowni.Paths[Flat File Source Output]"
               endId="Package\Laduj czas do hurtowni\Remove empty rows.Inputs[Conditional Split Input]"
-              name="Excel Source Output"
-              startId="Package\Laduj czas do hurtowni\Excel Source 1.Outputs[Excel Source Output]" />
+              name="Flat File Source Output"
+              startId="Package\Laduj czas do hurtowni\Flat File Source.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output]"
               endId="Package\Laduj czas do hurtowni\stage_error_ERROR_WHEELS_ON_TIME.Inputs[OLE DB Destination Input]"
@@ -2505,6 +2700,7 @@ where [refTable].[ARR_TIME_ID] = ?</property>
       DTS:refId="Package\Laduj daty do hurtowni"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
+      DTS:Disabled="True"
       DTS:DTSID="{86DBF974-2463-4809-9A26-53163F3E9AFC}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
@@ -2529,9 +2725,11 @@ where [refTable].[ARR_TIME_ID] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Convert to Date.Inputs[Data Conversion Input].Columns[DATE_ID]"
-                      cachedDataType="date"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DATE_ID"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DATE_ID]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DATE_ID]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2556,7 +2754,7 @@ where [refTable].[ARR_TIME_ID] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DATE_ID]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DATE_ID]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2604,10 +2802,11 @@ where [refTable].[ARR_TIME_ID] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Data Conversion.Inputs[Data Conversion Input].Columns[NAME_DAY]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="NAME_DAY"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[NAME_DAY]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[NAME_DAY]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -2634,7 +2833,7 @@ where [refTable].[ARR_TIME_ID] = ?</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[NAME_DAY]}</property>
+                          name="SourceInputColumnLineageID">#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[NAME_DAY]}</property>
                         <property
                           dataType="System.Boolean"
                           description="Indicates whether the column uses the faster, locale-neutral parsing routines."
@@ -2669,228 +2868,287 @@ where [refTable].[ARR_TIME_ID] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Laduj daty do hurtowni\Excel Source 1"
-              componentClassID="Microsoft.ExcelSource"
-              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Excel Source"
-              name="Excel Source 1"
+              refId="Package\Laduj daty do hurtowni\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Flat File Source"
               usesDispositions="true"
               version="1">
               <properties>
                 <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
                 <property
                   dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">Arkusz1$</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mapping from parameters in the SQL command to variables."
-                  name="ParameterMapping"></property>
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Laduj daty do hurtowni\Excel Source 1.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
-                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
+                  refId="Package\Laduj daty do hurtowni\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager CSV CALENDAR]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager CSV CALENDAR]"
+                  name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output]"
-                  name="Excel Source Output">
+                  refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DATE_ID]"
-                      dataType="date"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DATE_ID]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[DATE_ID]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DATE_ID]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DATE_ID]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DATE_ID]"
                       name="DATE_ID"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[QUARTER]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[QUARTER]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[QUARTER]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[QUARTER]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[QUARTER]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[QUARTER]"
                       name="QUARTER"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY_OF_WEEK]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY_OF_WEEK]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[DAY_OF_WEEK]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY_OF_WEEK]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DAY_OF_WEEK]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY_OF_WEEK]"
                       name="DAY_OF_WEEK"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[NAME_DAY]"
-                      dataType="wstr"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[NAME_DAY]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[NAME_DAY]"
-                      length="255"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[NAME_DAY]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NAME_DAY]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[NAME_DAY]"
                       name="NAME_DAY"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[LEAP_YEAR]"
-                      dataType="wstr"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[LEAP_YEAR]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[LEAP_YEAR]"
-                      length="255"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[LEAP_YEAR]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAP_YEAR]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[LEAP_YEAR]"
                       name="LEAP_YEAR"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[DAY]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DAY]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY]"
                       name="DAY"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MONTH]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MONTH]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[MONTH]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MONTH]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MONTH]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MONTH]"
                       name="MONTH"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[YEAR]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[YEAR]"
+                      codePage="1252"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[YEAR]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[YEAR]"
+                      externalMetadataColumnId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[YEAR]"
+                      length="100"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[YEAR]"
                       name="YEAR"
-                      truncationRowDisposition="FailComponent" />
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[DATE_ID]"
-                      dataType="date"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DATE_ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="DATE_ID" />
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[QUARTER]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[QUARTER]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="QUARTER" />
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[DAY_OF_WEEK]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DAY_OF_WEEK]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="DAY_OF_WEEK" />
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[NAME_DAY]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[NAME_DAY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="NAME_DAY" />
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[LEAP_YEAR]"
-                      dataType="wstr"
-                      length="255"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LEAP_YEAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="LEAP_YEAR" />
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[DAY]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[DAY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="DAY" />
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[MONTH]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[MONTH]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="MONTH" />
                     <externalMetadataColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].ExternalColumns[YEAR]"
-                      dataType="r8"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[YEAR]"
+                      codePage="1252"
+                      dataType="str"
+                      length="100"
                       name="YEAR" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output]"
+                  refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
-                  name="Excel Source Error Output">
+                  name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[DATE_ID]"
-                      dataType="date"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[DATE_ID]"
-                      name="DATE_ID" />
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[QUARTER]"
-                      dataType="r8"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[QUARTER]"
-                      name="QUARTER" />
-                    <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[DAY_OF_WEEK]"
-                      dataType="r8"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[DAY_OF_WEEK]"
-                      name="DAY_OF_WEEK" />
-                    <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[NAME_DAY]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[NAME_DAY]"
-                      name="NAME_DAY" />
-                    <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[LEAP_YEAR]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[LEAP_YEAR]"
-                      name="LEAP_YEAR" />
-                    <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[DAY]"
-                      dataType="r8"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[DAY]"
-                      name="DAY" />
-                    <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[MONTH]"
-                      dataType="r8"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[MONTH]"
-                      name="MONTH" />
-                    <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[YEAR]"
-                      dataType="r8"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[YEAR]"
-                      name="YEAR" />
-                    <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3070,46 +3328,60 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[DATE_ID]"
-                      cachedDataType="date"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DATE_ID"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DATE_ID]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DATE_ID]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[QUARTER]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="QUARTER"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[QUARTER]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[QUARTER]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[DAY_OF_WEEK]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DAY_OF_WEEK"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY_OF_WEEK]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY_OF_WEEK]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[NAME_DAY]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="NAME_DAY"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[NAME_DAY]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[NAME_DAY]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[LEAP_YEAR]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="LEAP_YEAR"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[LEAP_YEAR]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[LEAP_YEAR]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[DAY]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DAY"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[MONTH]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="MONTH"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MONTH]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MONTH]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input].Columns[YEAR]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="YEAR"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[YEAR]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[YEAR]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -3129,7 +3401,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">[ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DATE_ID]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[QUARTER]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY_OF_WEEK]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[NAME_DAY]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[LEAP_YEAR]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MONTH]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[YEAR]})</property>
+                      name="Expression">[ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DATE_ID]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[QUARTER]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY_OF_WEEK]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[NAME_DAY]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[LEAP_YEAR]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MONTH]}) || [ISNULL](#{Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[YEAR]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -3273,34 +3545,44 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
                       lineageId="Package\Laduj daty do hurtowni\Convert to Date.Outputs[Data Conversion Output].Columns[DATE_ID]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[QUARTER]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="QUARTER"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_QUARTER]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[QUARTER]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[QUARTER]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[DAY_OF_WEEK]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DAY_OF_WEEK"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_DAY_OF_WEEK]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY_OF_WEEK]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY_OF_WEEK]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[DAY]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DAY"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_DAY]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[MONTH]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="MONTH"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_MONTH]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MONTH]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MONTH]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[YEAR]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="YEAR"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_YEAR]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[YEAR]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[YEAR]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[Copy of NAME_DAY]"
                       cachedCodepage="1252"
@@ -3470,22 +3752,28 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
                   <inputColumns>
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[DATE_ID]"
-                      cachedDataType="date"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DATE_ID"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_DATE_ID]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DATE_ID]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DATE_ID]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[QUARTER]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="QUARTER"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_QUARTER]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[QUARTER]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[QUARTER]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[DAY_OF_WEEK]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DAY_OF_WEEK"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_DAY_OF_WEEK]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY_OF_WEEK]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY_OF_WEEK]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[Copy of NAME_DAY]"
                       cachedCodepage="1252"
@@ -3496,29 +3784,36 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
                       lineageId="Package\Laduj daty do hurtowni\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of NAME_DAY]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[LEAP_YEAR]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="LEAP_YEAR"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_LEAP_YEAR]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[LEAP_YEAR]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[LEAP_YEAR]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[DAY]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="DAY"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_DAY]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[DAY]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[DAY]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[MONTH]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="MONTH"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_MONTH]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[MONTH]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[MONTH]" />
                     <inputColumn
                       refId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].Columns[YEAR]"
-                      cachedDataType="r8"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="100"
                       cachedName="YEAR"
                       externalMetadataColumnId="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input].ExternalColumns[DEPARTURE_YEAR]"
-                      lineageId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output].Columns[YEAR]" />
+                      lineageId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output].Columns[YEAR]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3597,10 +3892,10 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
               name="Data Conversion Output"
               startId="Package\Laduj daty do hurtowni\Data Conversion.Outputs[Data Conversion Output]" />
             <path
-              refId="Package\Laduj daty do hurtowni.Paths[Excel Source Output]"
+              refId="Package\Laduj daty do hurtowni.Paths[Flat File Source Output]"
               endId="Package\Laduj daty do hurtowni\Remove empty rows.Inputs[Conditional Split Input]"
-              name="Excel Source Output"
-              startId="Package\Laduj daty do hurtowni\Excel Source 1.Outputs[Excel Source Output]" />
+              name="Flat File Source Output"
+              startId="Package\Laduj daty do hurtowni\Flat File Source.Outputs[Flat File Source Output]" />
             <path
               refId="Package\Laduj daty do hurtowni.Paths[Lookup No Match Output]"
               endId="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR.Inputs[OLE DB Destination Input]"
@@ -3644,13 +3939,13 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="188,41.6"
-          Id="Package\Laduj daty do hurtowni"
-          TopLeft="148.000002520425,107.670589745333" />
-        <NodeLayout
           Size="187.2,41.6"
           Id="Package\Laduj czas do hurtowni"
           TopLeft="406.285721204719,108.894119174258" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Laduj daty do hurtowni"
+          TopLeft="148.000002520425,107.670589745333" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="336.000002520425,129.082354459796">
@@ -3677,284 +3972,6 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Laduj daty do hurtowni">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="174.4,41.6"
-          Id="Package\Laduj daty do hurtowni\Remove empty rows"
-          TopLeft="333.920640607268,104.011765528825" />
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Laduj daty do hurtowni\Data Conversion"
-          TopLeft="344.857148730024,193.504577553101" />
-        <NodeLayout
-          Size="112.8,41.6"
-          Id="Package\Laduj daty do hurtowni\Lookup"
-          TopLeft="719.000012244496,397.835298154428" />
-        <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\Laduj daty do hurtowni\Excel Source 1"
-          TopLeft="114.857144813148,81.9764717379243" />
-        <NodeLayout
-          Size="400.8,41.6"
-          Id="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR"
-          TopLeft="137.190478526816,275.014381664141" />
-        <NodeLayout
-          Size="152.8,41.6"
-          Id="Package\Laduj daty do hurtowni\Convert to Date"
-          TopLeft="611.142867550557,308.364708664343" />
-        <NodeLayout
-          Size="315.2,41.6"
-          Id="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR"
-          TopLeft="262.428575897702,372.211769855888" />
-        <EdgeLayout
-          Id="Package\Laduj daty do hurtowni.Paths[OLE DB Destination Error Output]"
-          TopLeft="537.990478526815,295.814381664141">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="73.1523890237418,33.3503270002019"
-              Start="0,0"
-              End="65.6523890237418,33.3503270002019">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="32.5761945118709,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.5761945118709,0"
-                    Point2="36.5761945118709,0"
-                    Point3="36.5761945118709,4" />
-                  <mssgle:LineSegment
-                    End="36.5761945118709,29.3503270002019" />
-                  <mssgle:CubicBezierSegment
-                    Point1="36.5761945118709,29.3503270002019"
-                    Point2="36.5761945118709,33.3503270002019"
-                    Point3="40.5761945118709,33.3503270002019" />
-                  <mssgle:LineSegment
-                    End="65.6523890237418,33.3503270002019" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-36.6327117381291,-17.43359375,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj daty do hurtowni.Paths[Non null rows]"
-          TopLeft="421.788894668646,145.611765528825">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.8928120242762"
-              Start="0,0"
-              End="0,40.3928120242762">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.3928120242762" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-30.832578125,15.3218942933881,61.66515625,9.7490234375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj daty do hurtowni.Paths[Lookup No Match Output]"
-          TopLeft="719.000012244496,418.635298154428">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-141.371436346794,-25.6235282985398"
-              Start="0,0"
-              End="-133.871436346794,-25.6235282985398">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-66.685718173397,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-66.685718173397,0"
-                    Point2="-70.685718173397,0"
-                    Point3="-70.685718173397,-4" />
-                  <mssgle:LineSegment
-                    End="-70.685718173397,-21.6235282985398" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-70.685718173397,-21.6235282985398"
-                    Point2="-70.685718173397,-25.6235282985398"
-                    Point3="-74.685718173397,-25.6235282985398" />
-                  <mssgle:LineSegment
-                    End="-133.871436346794,-25.6235282985398" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-126.492104892147,1,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj daty do hurtowni.Paths[Excel Source Output]"
-          TopLeft="262.057144813148,102.776471737924">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="71.8634957941204,22.0352937909009"
-              Start="0,0"
-              End="64.3634957941204,22.0352937909009">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="31.9317478970602,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.9317478970602,0"
-                    Point2="35.9317478970602,0"
-                    Point3="35.9317478970602,4" />
-                  <mssgle:LineSegment
-                    End="35.9317478970602,18.0352937909009" />
-                  <mssgle:CubicBezierSegment
-                    Point1="35.9317478970602,18.0352937909009"
-                    Point2="35.9317478970602,22.0352937909009"
-                    Point3="39.9317478970602,22.0352937909009" />
-                  <mssgle:LineSegment
-                    End="64.3634957941204,22.0352937909009" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj daty do hurtowni.Paths[Data Conversion Output]"
-          TopLeft="687.542867550557,349.964708664343">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="87.8571446939391,47.8705894900855"
-              Start="0,0"
-              End="87.8571446939391,40.3705894900855">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.9352947450428" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.9352947450428"
-                    Point2="0,23.9352947450428"
-                    Point3="4,23.9352947450428" />
-                  <mssgle:LineSegment
-                    End="83.8571446939391,23.9352947450428" />
-                  <mssgle:CubicBezierSegment
-                    Point1="83.8571446939391,23.9352947450428"
-                    Point2="87.8571446939391,23.9352947450428"
-                    Point3="87.8571446939391,27.9352947450428" />
-                  <mssgle:LineSegment
-                    End="87.8571446939391,40.3705894900855" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj daty do hurtowni.Paths[Data Conversion Output1]"
-          TopLeft="422.457148730024,235.104577553101">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-84.866670203209,39.90980411104"
-              Start="0,0"
-              End="-84.866670203209,32.40980411104">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,15.95490205552" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,15.95490205552"
-                    Point2="0,19.95490205552"
-                    Point3="-4,19.95490205552" />
-                  <mssgle:LineSegment
-                    End="-80.866670203209,19.95490205552" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-80.866670203209,19.95490205552"
-                    Point2="-84.866670203209,19.95490205552"
-                    Point3="-84.866670203209,23.95490205552" />
-                  <mssgle:LineSegment
-                    End="-84.866670203209,32.40980411104" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Laduj daty do hurtowni\Lookup">
-    <Properties>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q2:string">[warehouse].[DIM_DEPARTURE_CALENDAR]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q3:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Laduj czas do hurtowni">
     <LayoutInfo>
       <GraphLayout
@@ -3979,10 +3996,6 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
           Size="251.2,41.6"
           Id="Package\Laduj czas do hurtowni\warehouse_DIM_WHEELS_ON_TIME"
           TopLeft="839.238108508441,322.996080567735" />
-        <NodeLayout
-          Size="147.2,41.6"
-          Id="Package\Laduj czas do hurtowni\Excel Source 1"
-          TopLeft="290.361908657697,60" />
         <NodeLayout
           Size="248.8,41.6"
           Id="Package\Laduj czas do hurtowni\warehouse_DIM_DEPARTURE_TIME"
@@ -4024,26 +4037,74 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
           Id="Package\Laduj czas do hurtowni\stage_error_ERROR_WHEELS_ON_TIME"
           TopLeft="1094.13335093089,509.364707704124" />
         <EdgeLayout
-          Id="Package\Laduj czas do hurtowni.Paths[OLE DB Destination Error Output]"
-          TopLeft="546.695244874759,486.635296525703">
+          Id="Package\Laduj czas do hurtowni.Paths[OLE DB Destination Error Output3]"
+          TopLeft="470.723814318131,362.180394379023">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,38.4000002430937"
+              EndConnector="-299.447622982336,45.050980234862"
               Start="0,0"
-              End="0,30.9000002430937">
+              End="-299.447622982336,37.550980234862">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30.9000002430937" />
+                    End="0,18.525490117431" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.525490117431"
+                    Point2="0,22.525490117431"
+                    Point3="-4,22.525490117431" />
+                  <mssgle:LineSegment
+                    End="-295.447622982336,22.525490117431" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-295.447622982336,22.525490117431"
+                    Point2="-299.447622982336,22.525490117431"
+                    Point3="-299.447622982336,26.525490117431" />
+                  <mssgle:LineSegment
+                    End="-299.447622982336,37.550980234862" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-73.20890625,9.73320324654685,146.4178125,11.43359375"
+              BoundingBox="-222.932717741168,27.525490117431,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Laduj czas do hurtowni.Paths[OLE DB Destination Error Output2]"
+          TopLeft="964.838108508441,364.596080567735">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="242.609529119612,45.380392385657"
+              Start="0,0"
+              End="242.609529119612,37.880392385657">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.6901961928285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.6901961928285"
+                    Point2="0,22.6901961928285"
+                    Point3="4,22.6901961928285" />
+                  <mssgle:LineSegment
+                    End="238.609529119612,22.6901961928285" />
+                  <mssgle:CubicBezierSegment
+                    Point1="238.609529119612,22.6901961928285"
+                    Point2="242.609529119612,22.6901961928285"
+                    Point3="242.609529119612,26.6901961928285" />
+                  <mssgle:LineSegment
+                    End="242.609529119612,37.880392385657" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="48.095858309806,27.6901961928285,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4084,74 +4145,26 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Laduj czas do hurtowni.Paths[OLE DB Destination Error Output2]"
-          TopLeft="964.838108508441,364.596080567735">
+          Id="Package\Laduj czas do hurtowni.Paths[OLE DB Destination Error Output]"
+          TopLeft="546.695244874759,486.635296525703">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="242.609529119612,45.380392385657"
+              EndConnector="0,38.4000002430937"
               Start="0,0"
-              End="242.609529119612,37.880392385657">
+              End="0,30.9000002430937">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.6901961928285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.6901961928285"
-                    Point2="0,22.6901961928285"
-                    Point3="4,22.6901961928285" />
-                  <mssgle:LineSegment
-                    End="238.609529119612,22.6901961928285" />
-                  <mssgle:CubicBezierSegment
-                    Point1="238.609529119612,22.6901961928285"
-                    Point2="242.609529119612,22.6901961928285"
-                    Point3="242.609529119612,26.6901961928285" />
-                  <mssgle:LineSegment
-                    End="242.609529119612,37.880392385657" />
+                    End="0,30.9000002430937" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="48.0958583098061,27.6901961928285,146.4178125,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj czas do hurtowni.Paths[OLE DB Destination Error Output3]"
-          TopLeft="470.723814318131,362.180394379023">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-299.447622982336,45.050980234862"
-              Start="0,0"
-              End="-299.447622982336,37.550980234862">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.525490117431" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.525490117431"
-                    Point2="0,22.525490117431"
-                    Point3="-4,22.525490117431" />
-                  <mssgle:LineSegment
-                    End="-295.447622982336,22.525490117431" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-295.447622982336,22.525490117431"
-                    Point2="-299.447622982336,22.525490117431"
-                    Point3="-299.447622982336,26.525490117431" />
-                  <mssgle:LineSegment
-                    End="-299.447622982336,37.550980234862" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-222.932717741168,27.525490117431,146.4178125,11.43359375"
+              BoundingBox="-73.20890625,9.73320324654685,146.4178125,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -4292,90 +4305,6 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output]"
-          TopLeft="1207.44763762805,451.576472953392">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.6857133028398,57.7882347507319"
-              Start="0,0"
-              End="20.6857133028398,50.2882347507319">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.8941173753659" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24.8941173753659"
-                    Point2="0,28.8941173753659"
-                    Point3="4,28.8941173753659" />
-                  <mssgle:LineSegment
-                    End="16.6857133028398,28.8941173753659" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.6857133028398,28.8941173753659"
-                    Point2="20.6857133028398,28.8941173753659"
-                    Point3="20.6857133028398,32.8941173753659" />
-                  <mssgle:LineSegment
-                    End="20.6857133028398,50.2882347507319" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-45.4635300673301,33.8941173753659,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output1]"
-          TopLeft="891.085726790526,569.850984416069">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,47.8117640337999"
-              Start="0,0"
-              End="0,40.3117640337999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,40.3117640337999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,14.3511945169,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output2]"
-          TopLeft="551.44762584336,566.635296768796">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,49.301962657563"
-              Start="0,0"
-              End="0,41.801962657563">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,41.801962657563" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,15.0962938287815,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output3]"
           TopLeft="171.276191335795,448.831374613885">
           <EdgeLayout.Curve>
@@ -4412,37 +4341,87 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Laduj czas do hurtowni.Paths[Excel Source Output]"
-          TopLeft="363.961908657697,101.6">
+          Id="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output2]"
+          TopLeft="551.44762584336,566.635296768796">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="198.8571460393,50.1647071693186"
+              EndConnector="0,49.301962657563"
               Start="0,0"
-              End="198.8571460393,42.6647071693186">
+              End="0,41.801962657563">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,21.0823535846593" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.0823535846593"
-                    Point2="0,25.0823535846593"
-                    Point3="4,25.0823535846593" />
-                  <mssgle:LineSegment
-                    End="194.8571460393,25.0823535846593" />
-                  <mssgle:CubicBezierSegment
-                    Point1="194.8571460393,25.0823535846593"
-                    Point2="198.8571460393,25.0823535846593"
-                    Point3="198.8571460393,29.0823535846593" />
-                  <mssgle:LineSegment
-                    End="198.8571460393,42.6647071693186" />
+                    End="0,41.801962657563" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,15.0962938287815,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output1]"
+          TopLeft="891.085726790526,569.850984416069">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.8117640337999"
+              Start="0,0"
+              End="0,40.3117640337999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.3117640337999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,14.3511945169,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Laduj czas do hurtowni.Paths[Lookup No Match Output]"
+          TopLeft="1207.44763762805,451.576472953392">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.6857133028398,57.7882347507319"
+              Start="0,0"
+              End="20.6857133028398,50.2882347507319">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.8941173753659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.8941173753659"
+                    Point2="0,28.8941173753659"
+                    Point3="4,28.8941173753659" />
+                  <mssgle:LineSegment
+                    End="16.6857133028398,28.8941173753659" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.6857133028398,28.8941173753659"
+                    Point2="20.6857133028398,28.8941173753659"
+                    Point3="20.6857133028398,32.8941173753659" />
+                  <mssgle:LineSegment
+                    End="20.6857133028398,50.2882347507319" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-45.4635300673301,33.8941173753659,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -4471,6 +4450,32 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
                     Point3="150.971431442183,25.9058823815406" />
                   <mssgle:LineSegment
                     End="150.971431442183,36.3117647630811" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Laduj czas do hurtowni\Flat File Source"
+          TopLeft="217.6,146.4" />
+        <EdgeLayout
+          Id="Package\Laduj czas do hurtowni.Paths[Flat File Source Output]"
+          TopLeft="368,169.88235358466">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="107.619054696997,0"
+              Start="0,0"
+              End="100.119054696997,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="100.119054696997,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4519,7 +4524,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:int">0</Value>
+          type="q3:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4563,7 +4568,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:int">0</Value>
+          type="q3:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4581,7 +4586,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:int">0</Value>
+          type="q3:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4638,7 +4643,7 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q3:int">0</Value>
+          type="q3:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4647,6 +4652,272 @@ where [refTable].[DEPARTURE_DATE_ID] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Laduj czas do hurtowni\stage_error_ERROR_WHEELS_ON_TIME">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Laduj daty do hurtowni">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="174.4,41.6"
+          Id="Package\Laduj daty do hurtowni\Remove empty rows"
+          TopLeft="333.920640607268,104.011765528825" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Laduj daty do hurtowni\Data Conversion"
+          TopLeft="344.857148730024,193.504577553101" />
+        <NodeLayout
+          Size="112.8,41.6"
+          Id="Package\Laduj daty do hurtowni\Lookup"
+          TopLeft="719.000012244496,397.835298154428" />
+        <NodeLayout
+          Size="400.8,41.6"
+          Id="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR"
+          TopLeft="137.190478526816,275.014381664141" />
+        <NodeLayout
+          Size="152.8,41.6"
+          Id="Package\Laduj daty do hurtowni\Convert to Date"
+          TopLeft="611.142867550557,308.364708664343" />
+        <NodeLayout
+          Size="315.2,41.6"
+          Id="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR"
+          TopLeft="262.428575897702,372.211769855888" />
+        <EdgeLayout
+          Id="Package\Laduj daty do hurtowni.Paths[OLE DB Destination Error Output]"
+          TopLeft="537.990478526815,295.814381664141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="73.1523890237418,33.3503270002019"
+              Start="0,0"
+              End="65.6523890237418,33.3503270002019">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.5761945118709,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.5761945118709,0"
+                    Point2="36.5761945118709,0"
+                    Point3="36.5761945118709,4" />
+                  <mssgle:LineSegment
+                    End="36.5761945118709,29.3503270002019" />
+                  <mssgle:CubicBezierSegment
+                    Point1="36.5761945118709,29.3503270002019"
+                    Point2="36.5761945118709,33.3503270002019"
+                    Point3="40.5761945118709,33.3503270002019" />
+                  <mssgle:LineSegment
+                    End="65.6523890237418,33.3503270002019" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-36.6327117381291,-17.43359375,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Laduj daty do hurtowni.Paths[Non null rows]"
+          TopLeft="421.788894668646,145.611765528825">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,47.8928120242762"
+              Start="0,0"
+              End="0,40.3928120242762">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.3928120242762" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-30.832578125,15.3218942933881,61.66515625,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Laduj daty do hurtowni.Paths[Lookup No Match Output]"
+          TopLeft="719.000012244496,418.635298154428">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-141.371436346794,-25.6235282985398"
+              Start="0,0"
+              End="-133.871436346794,-25.6235282985398">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-66.685718173397,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-66.685718173397,0"
+                    Point2="-70.685718173397,0"
+                    Point3="-70.685718173397,-4" />
+                  <mssgle:LineSegment
+                    End="-70.685718173397,-21.6235282985398" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-70.685718173397,-21.6235282985398"
+                    Point2="-70.685718173397,-25.6235282985398"
+                    Point3="-74.685718173397,-25.6235282985398" />
+                  <mssgle:LineSegment
+                    End="-133.871436346794,-25.6235282985398" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-126.492104892147,1,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Laduj daty do hurtowni.Paths[Data Conversion Output1]"
+          TopLeft="422.457148730024,235.104577553101">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-84.866670203209,39.90980411104"
+              Start="0,0"
+              End="-84.866670203209,32.40980411104">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.95490205552" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.95490205552"
+                    Point2="0,19.95490205552"
+                    Point3="-4,19.95490205552" />
+                  <mssgle:LineSegment
+                    End="-80.866670203209,19.95490205552" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-80.866670203209,19.95490205552"
+                    Point2="-84.866670203209,19.95490205552"
+                    Point3="-84.866670203209,23.95490205552" />
+                  <mssgle:LineSegment
+                    End="-84.866670203209,32.40980411104" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Laduj daty do hurtowni.Paths[Data Conversion Output]"
+          TopLeft="687.542867550557,349.964708664343">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="87.8571446939391,47.8705894900855"
+              Start="0,0"
+              End="87.8571446939391,40.3705894900855">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.9352947450428" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.9352947450428"
+                    Point2="0,23.9352947450428"
+                    Point3="4,23.9352947450428" />
+                  <mssgle:LineSegment
+                    End="83.8571446939391,23.9352947450428" />
+                  <mssgle:CubicBezierSegment
+                    Point1="83.8571446939391,23.9352947450428"
+                    Point2="87.8571446939391,23.9352947450428"
+                    Point3="87.8571446939391,27.9352947450428" />
+                  <mssgle:LineSegment
+                    End="87.8571446939391,40.3705894900855" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150.4,41.6"
+          Id="Package\Laduj daty do hurtowni\Flat File Source"
+          TopLeft="101.02857312183,99.7647070234622" />
+        <EdgeLayout
+          Id="Package\Laduj daty do hurtowni.Paths[Flat File Source Output]"
+          TopLeft="251.42857312183,122.688236276144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="82.492067485438,0"
+              Start="0,0"
+              End="74.992067485438,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="74.992067485438,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Laduj daty do hurtowni\Lookup">
+    <Properties>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q2:string">[warehouse].[DIM_DEPARTURE_CALENDAR]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q3:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Laduj daty do hurtowni\warehouse_DIM_DEPARTURE_CALENDAR">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Laduj daty do hurtowni\stage_error_ERROR_WH_DEPARTURE_CALENDAR">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
